@@ -4,7 +4,7 @@ import { ref, shallowRef } from 'vue'
 import KonkortAboutUsAboutUs from './KonkortAboutUsAboutUs.vue'
 import KonkortAboutUsUslugi from './KonkortAboutUsUslugi.vue'
 import KonkortLicenses from './KonkortLicenses.vue'
-let aboutUsButtonResult = shallowRef(KonkortLicenses)
+let aboutUsButtonResult = shallowRef(KonkortAboutUsAboutUs)
 let firstButton = ref(true)
 let secondButton = ref(false)
 let thirdButton = ref(false)
