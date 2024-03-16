@@ -1,29 +1,79 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { Button } from './components/ui/button'
-import KonkortAbout from './components/KonkortAbout.vue'
+import { ref } from 'vue'
+let activeButtonAbout = ref(false)
+let activeButtonTV = ref(false)
+let activeButtonContacts = ref(false)
 </script>
 
 <template>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet"
-  />
   <div class="container mx-auto place-items-center max-w-5xl mt-6">
     <div class="flex flex-wrap justify-around gap-4">
-      <Button>&nbsp;&nbsp;О КОМПАНИИ&nbsp;&nbsp;</Button>
+      <RouterLink to="/about"
+        ><Button
+          :class="{ anime: activeButtonAbout }"
+          @click="
+            () => {
+              activeButtonAbout = true
+              activeButtonTV = false
+              activeButtonContacts = false
+            }
+          "
+          >&nbsp;&nbsp;О КОМПАНИИ&nbsp;&nbsp;</Button
+        ></RouterLink
+      >
       <Button
         >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;НОВОСТИ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Button
       >
       <Button>ВИДЕОНОВОСТИ</Button>
-      <Button>&nbsp;&nbsp;ТЕЛЕВИДЕНИЕ&nbsp;&nbsp;</Button>
+      <RouterLink to="/tv"
+        ><Button
+          :class="{ anime: activeButtonTV }"
+          @click="
+            () => {
+              activeButtonAbout = false
+              activeButtonTV = true
+              activeButtonContacts = false
+            }
+          "
+          >&nbsp;&nbsp;ТЕЛЕВИДЕНИЕ&nbsp;&nbsp;</Button
+        ></RouterLink
+      >
       <Button>&nbsp;&nbsp;&nbsp;&nbsp;АБОНЕНТАМ&nbsp;&nbsp;&nbsp;</Button>
-      <Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;КОНТАКТЫ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Button>
+      <RouterLink to="/contacts"
+        ><Button
+          :class="{ anime: activeButtonContacts }"
+          @click="
+            () => {
+              activeButtonAbout = false
+              activeButtonTV = false
+              activeButtonContacts = true
+            }
+          "
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;КОНТАКТЫ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Button
+        ></RouterLink
+      >
     </div>
-    <KonkortAbout></KonkortAbout>
+    <RouterView></RouterView>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.anime {
+  text-align: center;
+  outline: 3px rgba(18, 222, 218, 0.895) solid;
+  animation: test 1s infinite;
+}
+@keyframes test {
+  25% {
+    outline-color: rgba(18, 222, 218, 0.895);
+  }
+  50% {
+    outline-color: rgba(91, 247, 244, 0.895);
+  }
+  75% {
+    outline-color: rgba(232, 242, 242, 0.895);
+  }
+}
+</style>

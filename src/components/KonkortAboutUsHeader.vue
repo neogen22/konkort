@@ -56,32 +56,18 @@ let thirdButton = ref(false)
 <style scoped>
 .anime {
   text-align: center;
-  animation: blur 0.75s ease-out infinite;
-  text-shadow:
-    0px 0px 5px #fff,
-    0px 0px 7px #fff;
+  outline: 3px rgba(18, 222, 218, 0.895) solid;
+  animation: test 1s infinite;
 }
-@keyframes blur {
-  from {
-    text-shadow:
-      0px 0px 10px #fff,
-      0px 0px 10px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 50px #fff,
-      0px 0px 50px #fff,
-      0px 0px 50px #7b96b8,
-      0px 0px 150px #7b96b8,
-      0px 10px 100px #7b96b8,
-      0px 10px 100px #7b96b8,
-      0px 10px 100px #7b96b8,
-      0px 10px 100px #7b96b8,
-      0px -10px 100px #7b96b8,
-      0px -10px 100px #7b96b8;
+@keyframes test {
+  25% {
+    outline-color: rgba(18, 222, 218, 0.895);
+  }
+  50% {
+    outline-color: rgba(91, 247, 244, 0.895);
+  }
+  75% {
+    outline-color: rgba(232, 242, 242, 0.895);
   }
 }
 p {
