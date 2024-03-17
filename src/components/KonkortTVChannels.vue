@@ -10,10 +10,10 @@
     <TabsContent value="social" class="">
       <h2 class="text-black text-xl text-center mt-4">СОЦИАЛЬНЫЙ ПАКЕТ</h2>
       <p class="text-black text-center">по состоянию на 13.03.2019</p>
-      <div class="grid grid-cols-3 place-items-center border-l border-b mt-4">
+      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
         <span
           v-for="channel in channelsSocial"
-          class="w-[320px] text-center min-h-7 border-r border-t"
+          class="w-full text-center min-h-7 border-r border-t"
         >
           {{ channel }}
         </span>
@@ -22,11 +22,8 @@
     <TabsContent value="base" class="">
       <h2 class="text-black text-xl text-center mt-4">БАЗОВЫЙ ПАКЕТ</h2>
       <p class="text-black text-center">по состоянию на 13.03.2019</p>
-      <div class="grid grid-cols-3 place-items-center border-l border-b mt-4">
-        <span
-          v-for="channel in channelsBase"
-          class="w-[320px] text-center min-h-7 border-r border-t"
-        >
+      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
+        <span v-for="channel in channelsBase" class="w-full text-center min-h-7 border-r border-t">
           {{ channel }}
         </span>
       </div>

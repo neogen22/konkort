@@ -6,6 +6,7 @@ import KonkortMain from '@/components/KonkortMain.vue'
 import KonkortTVPodkluchenie from '@/components/KonkortTVPodkluchenie.vue'
 import KonkortTVMain from '@/components/KonkortTVMain.vue'
 import KonkortTVChannels from '@/components/KonkortTVChannels.vue'
+import KonkortTVAdvertising from '@/components/KonkortTVAdvertising.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +38,11 @@ const router = createRouter({
           path: 'channels',
           name: 'channels',
           component: KonkortTVChannels
+        },
+        {
+          path: 'advertising',
+          name: 'advertising',
+          component: KonkortTVAdvertising
         }
       ]
       // route level code-splitting

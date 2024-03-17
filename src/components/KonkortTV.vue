@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
     <RouterLink to="/tv/channels"><Button>Каналы</Button></RouterLink>
     <Button>Настройка телеканалов</Button>
     <Button>Прейскурант на услуги</Button>
-    <Button>Реклама на ТВ</Button>
+    <RouterLink to="/tv/advertising"><Button>Реклама на ТВ</Button></RouterLink>
   </div>
   <RouterView></RouterView>
 
