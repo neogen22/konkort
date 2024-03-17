@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
   <div class="flex mt-4 justify-around gap-4">
     <RouterLink to="/tv/podkl"><Button>Как подключиться</Button></RouterLink>
     <Button>Оборудование</Button>
-    <Button>Каналы</Button>
+    <RouterLink to="/tv/channels"><Button>Каналы</Button></RouterLink>
     <Button>Настройка телеканалов</Button>
     <Button>Прейскурант на услуги</Button>
     <Button>Реклама на ТВ</Button>
