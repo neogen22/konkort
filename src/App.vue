@@ -9,50 +9,42 @@ let activeButtonContacts = ref(false)
 
 <template>
   <div class="container mx-auto place-items-center max-w-5xl mt-6">
-    <div class="flex flex-wrap justify-around gap-4">
-      <RouterLink to="/about"
-        ><Button
-          :class="{ anime: activeButtonAbout }"
-          @click="
-            () => {
-              activeButtonAbout = true
-              activeButtonTV = false
-              activeButtonContacts = false
-            }
-          "
-          >&nbsp;&nbsp;О КОМПАНИИ&nbsp;&nbsp;</Button
-        ></RouterLink
-      >
+    <div class="grid grid-cols-2 gap-2 lg:grid-cols-6 md:grid-cols-3">
       <Button
-        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;НОВОСТИ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Button
+        :class="{ anime: activeButtonAbout }"
+        @click="
+          () => {
+            activeButtonAbout = true
+            activeButtonTV = false
+            activeButtonContacts = false
+          }
+        "
+        ><RouterLink to="/about">О КОМПАНИИ</RouterLink></Button
       >
+      <Button>НОВОСТИ</Button>
       <Button>ВИДЕОНОВОСТИ</Button>
-      <RouterLink to="/tv"
-        ><Button
-          :class="{ anime: activeButtonTV }"
-          @click="
-            () => {
-              activeButtonAbout = false
-              activeButtonTV = true
-              activeButtonContacts = false
-            }
-          "
-          >&nbsp;&nbsp;ТЕЛЕВИДЕНИЕ&nbsp;&nbsp;</Button
-        ></RouterLink
+      <Button
+        :class="{ anime: activeButtonTV }"
+        @click="
+          () => {
+            activeButtonAbout = false
+            activeButtonTV = true
+            activeButtonContacts = false
+          }
+        "
+        ><RouterLink to="/tv">ТЕЛЕВИДЕНИЕ</RouterLink></Button
       >
       <Button>&nbsp;&nbsp;&nbsp;&nbsp;АБОНЕНТАМ&nbsp;&nbsp;&nbsp;</Button>
-      <RouterLink to="/contacts"
-        ><Button
-          :class="{ anime: activeButtonContacts }"
-          @click="
-            () => {
-              activeButtonAbout = false
-              activeButtonTV = false
-              activeButtonContacts = true
-            }
-          "
-          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;КОНТАКТЫ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Button
-        ></RouterLink
+      <Button
+        :class="{ anime: activeButtonContacts }"
+        @click="
+          () => {
+            activeButtonAbout = false
+            activeButtonTV = false
+            activeButtonContacts = true
+          }
+        "
+        ><RouterLink to="/contacts">КОНТАКТЫ</RouterLink></Button
       >
     </div>
     <RouterView></RouterView>

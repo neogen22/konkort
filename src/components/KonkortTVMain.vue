@@ -1,8 +1,4 @@
-<script setup>
-import KonkortTVPodkluchenie from './KonkortTVPodkluchenie.vue'
-import { RouterLink, RouterView } from 'vue-router'
-import { Button } from '@/components/ui/button'
-</script>
+<script setup></script>
 
 <template>
   <h1 class="text-black text-3xl text-center mt-4">ТЕЛЕВИДЕНИЕ</h1>
