@@ -1,3 +1,15 @@
+<script setup lang="ts">
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from '@/components/ui/table'
+</script>
+
 <template>
   <h1 class="text-black text-3xl text-center mt-4">Реклама на телеканале "КтвК"</h1>
   <p class="text-black text-base mt-4 text-justify">
@@ -134,207 +146,226 @@
       вашего ролика на телеканале "КтвК".
     </p>
   </div>
-  <table class="mt-4 w-full table-fixed">
-    <thead>
-      <tr>
-        <th class="w-8 text-left">1.</th>
-        <th class="text-left w-10/12">Телетекст (один день)</th>
-        <th class="text-right"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td>Фон (цветовой, музыкальный)</td>
-        <td class="text-right">400=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Для юридических лиц за 1 слово 7 раз в день</td>
-        <td class="text-right">80=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Для физических лиц за 1 слово 7 раз в день</td>
-        <td class="text-right">40=00</td>
-      </tr>
-    </tbody>
-    <thead>
-      <tr>
-        <th class="w-8 text-left">2.</th>
-        <th class="text-left w-8/12">Видеоролик</th>
-        <th class="text-right w-4/12"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td>Изготовление рекламного видеоролика до 30 секунд</td>
-        <td class="text-right">от 10000=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Размещение видеоролика до 30 секунд 7 раз в день, за 1 день</td>
-        <td class="text-right">1000=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Разработка сценария</td>
-        <td class="text-right">1000=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Съемка дополнительного объекта (1 объект)</td>
-        <td class="text-right">2500=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Работа съемочной группы в выходные и праздничные дни (в час)</td>
-        <td class="text-right">2000=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Работа другого персонала (дикторы)</td>
-        <td class="text-right">1500=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Адаптация видеоролика, предоставленного заказчиком (текст)</td>
-        <td class="text-right">от 1000=00</td>
-      </tr>
-      <tr>
-        <td>+</td>
-        <td>Дикторский голос, музыка</td>
-        <td class="text-right">до 2000=00</td>
-      </tr>
-    </tbody>
-    <thead>
-      <tr>
-        <th class="w-8 text-left align-text-top">3.</th>
-        <th class="text-left">
+  <h2 class="text-black text-xl text-center mt-4 font-semibold">
+    Расценки на изготовление и размещение рекламных и информационных материалов с 01.03.2019.*
+  </h2>
+  <Table class="mt-4"
+    ><TableHeader>
+      <TableRow>
+        <TableHead class="text-left w-[20px] p-0 lg:p-2">1.</TableHead>
+        <TableHead class="text-left w-[720px] p-0 lg:p-2">Телетекст (один день)</TableHead>
+        <TableHead></TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify">Фон (цветовой, музыкальный)</TableCell>
+        <TableCell class="text-center"> 400=00 </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify"
+          >Для юридических лиц за 1 слово 7 раз в день</TableCell
+        >
+        <TableCell class="text-center"> 80=00 </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="border-b"></TableCell>
+        <TableCell class="border-b p-0 lg:p-2 text-justify"
+          >Для физических лиц за 1 слово 7 раз в день</TableCell
+        >
+        <TableCell class="text-center border-b"> 40=00 </TableCell>
+      </TableRow>
+    </TableBody>
+    <TableHeader>
+      <TableRow>
+        <TableHead class="text-left p-0 lg:p-2">2.</TableHead>
+        <TableHead class="text-left w-[720px] p-0 lg:p-2">Видеоролик</TableHead>
+        <TableHead></TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify">
+          Изготовление рекламного видеоролика до 30 секунд</TableCell
+        >
+        <TableCell class="text-center"> от 10000=00 </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify"
+          >Размещение видеоролика до 30 секунд 7 раз в день, за 1 день</TableCell
+        >
+        <TableCell class="text-center"> 1000=00 </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify">Разработка сценария</TableCell>
+        <TableCell class="text-center"> 1000=00</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify">
+          Съемка дополнительного объекта (1 объект)</TableCell
+        >
+        <TableCell class="text-center"> 2500=00 </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify">
+          Работа съемочной группы в выходные и праздничные дни (в час)</TableCell
+        >
+        <TableCell class="text-center"> 2500=00 </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify"> Работа другого персонала (дикторы)</TableCell>
+        <TableCell class="text-center"> 1500=00</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="border-b p-0 lg:p-2 text-justify">
+          Адаптация видеоролика, предоставленного заказчиком (текст)</TableCell
+        >
+        <TableCell class="text-center"> от 1000=00</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="border-b p-0 lg:p-2 text-justify">+</TableCell>
+        <TableCell class="border-b p-0 lg:p-2 text-justify"> Дикторский голос, музыка</TableCell>
+        <TableCell class="text-center border-b p-0 lg:p-2"> до 2000=00</TableCell>
+      </TableRow>
+    </TableBody>
+    <TableHeader>
+      <TableRow>
+        <TableHead class="text-left p-0 lg:p-2">3.</TableHead>
+        <TableHead class="text-justify w-[720px] p-0 lg:p-2">
           Размещение готовых видеофильмов, видеороликов и собственных передач заказчика до 2х минут
           7 раз в день, за 1 день.
-        </th>
-        <td class="text-right align-text-top">8000=00</td>
-      </tr>
-    </thead>
-    <thead>
-      <tr>
-        <th class="w-8 text-left align-text-top">4.</th>
-        <th class="text-left">
+        </TableHead>
+        <TableCell class="text-center">8000=00</TableCell>
+      </TableRow>
+    </TableHeader>
+    <TableHeader>
+      <TableRow>
+        <TableHead class="text-left p-0 lg:p-2">4.</TableHead>
+        <TableHead class="text-justify w-[720px] p-0 lg:p-2">
           Запись видеосюжета на носитель информации, предоставленный заказчиком (при наличии
           технической возможности таковой записи в ООО «Конкорт-1»)
-        </th>
-        <th class="text-right"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td class="text-justify">
+        </TableHead>
+        <TableCell class="text-center"></TableCell>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="text-justify p-0 lg:p-2">
           для физического лица для использования в личных целях (без цели распространения данного
           видеосюжета или материалов из него в любом виде)
-        </td>
-        <td class="text-right align-text-top">700=00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="text-justify">
+        </TableCell>
+        <TableCell class="text-center"> 700=00 </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="text-justify p-0 lg:p-2">
           для физического лица с целью распространения данного видеосюжета или материалов из него с
           передачей авторских прав
-        </td>
-        <td class="text-right align-text-top">договорная</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="text-justify">
+        </TableCell>
+        <TableCell class="text-center"> договорная </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="text-justify p-0 lg:p-2">
           для юридического лица для использования без целей распространения данного видеосюжета или
           отдельных материалов из него в любом виде
-        </td>
-        <td class="text-right align-text-top">договорная</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="text-justify">
+        </TableCell>
+        <TableCell class="text-center"> договорная</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="text-justify p-0 lg:p-2">
           для юридического лица для использования с целью распространения данного видеосюжета или
-          отдельных материалов из него в любом виде
-        </td>
-        <td class="text-right align-text-top">договорная</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="text-justify">
+          отдельных материалов из него в любом виде</TableCell
+        >
+        <TableCell class="text-center p-0 lg:p-2"> договорная </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="text-justify p-0 lg:p-2">
           для юридического лица для использования без целей распространения данного видеосюжета или
-          отдельных материалов из него в любом виде с предоставлением исходного видеоматериала
-        </td>
-        <td class="text-right align-text-top">договорная</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="text-justify">
+          отдельных материалов из него в любом виде с предоставлением исходного
+          видеоматериала</TableCell
+        >
+        <TableCell class="text-center"> договорная </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="border-b"></TableCell>
+        <TableCell class="text-justify border-b p-0 lg:p-2">
           для юридического лица для использования с целью распространения данного видеосюжета или
           отдельных материалов из него в любом виде с предоставлением исходного видеоматериала с
           передачей авторских прав
-        </td>
-        <td class="text-right align-text-top">договорная</td>
-      </tr>
-    </tbody>
-    <thead>
-      <tr>
-        <th class="w-8 text-left align-text-top">5.</th>
-        <th class="text-left">Изготовление информационного видеоролика до 2х минут</th>
-        <td class="text-right">12000=00</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td class="text-justify">
-          (в стоимость включены: выезд съемочной группы (1 объект), монтаж, озвучивание, написание
-          текста и прокат информационного видеосюжета согласно плана выхода информационных
-          материалов (Приложение №1))
-        </td>
-      </tr>
-    </tbody>
-    <thead>
-      <tr>
-        <th class="w-8 text-left align-text-top">6.</th>
-        <th class="text-left">
+        </TableCell>
+        <TableCell class="text-center border-b"> договорная</TableCell>
+      </TableRow>
+    </TableBody>
+    <TableHeader>
+      <TableRow>
+        <TableHead class="text-left p-0 lg:p-2">5.</TableHead>
+        <TableHead class="text-justify w-[720px] p-0 lg:p-2">
+          Изготовление информационного видеоролика до 2х минут 12000=00 (в стоимость включены: выезд
+          съемочной группы (1 объект), монтаж, озвучивание, написание текста и прокат
+          информационного видеосюжета согласно плана выхода информационных материалов (Приложение
+          №1))
+        </TableHead>
+        <TableCell class="text-center">12000=00</TableCell>
+      </TableRow>
+    </TableHeader>
+    <TableHeader>
+      <TableRow>
+        <TableHead class="text-left p-0 lg:p-2">6.</TableHead>
+        <TableHead class="text-justify w-[720px] p-0 lg:p-2">
           Прокат информационного видеоролика, изготовленного ООО «Конкорт-1» 7 раз в день за 1 день
-        </th>
-        <td class="text-right">2000=00</td>
-      </tr>
-    </thead>
-  </table>
-  <table>
-    <thead>
-      <tr>
-        <th class="w-8 text-left">7.</th>
-        <th class="text-left w-9/12">Срочность изготовления и размещения материала</th>
-        <th class="text-right"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td class="text-justify">
-          за срочность изготовления и размещения материала в течение 24 часов
-        </td>
-        <td class="text-right">дополнительная плата в трехкратном размере;</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="text-justify">заявка на размещение в течение 24 часов</td>
-        <td class="text-right">дополнительная плата в трехкратном размере;</td>
-      </tr>
-    </tbody>
-    <thead>
-      <tr>
-        <th class="w-8 text-left">8.</th>
-        <th class="text-left w-9/12">Передача неисключительных авторских прав на видеоматериал</th>
-        <td class="text-right">8000=00</td>
-      </tr>
-    </thead>
-  </table>
+        </TableHead>
+        <TableCell class="text-center">12000=00</TableCell>
+      </TableRow>
+    </TableHeader>
+    <TableHeader>
+      <TableRow>
+        <TableHead class="text-left p-0 lg:p-2">7.</TableHead>
+        <TableHead class="text-justify w-[720px] p-0 lg:p-2">
+          Срочность изготовления и размещения материала
+        </TableHead>
+        <TableCell class="text-center"></TableCell>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell class="p-0 lg:p-2 text-justify"
+          >за срочность изготовления и размещения материала в течение 24 часов</TableCell
+        >
+        <TableCell class="text-center"> дополнительная плата в трехкратном размере </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="border-b"></TableCell>
+        <TableCell class="border-b p-0 lg:p-2 text-justify"
+          >заявка на размещение в течение 24 часов</TableCell
+        >
+        <TableCell class="text-center border-b">
+          дополнительная плата в трехкратном размере
+        </TableCell>
+      </TableRow>
+    </TableBody>
+    <TableHeader>
+      <TableRow>
+        <TableHead class="border-b text-left p-0 lg:p-2">8.</TableHead>
+        <TableHead class="border-b text-justify w-[720px] p-0 lg:p-2">
+          Передача неисключительных авторских прав на видеоматериал
+        </TableHead>
+        <TableCell class="border-b text-center">8000=00</TableCell>
+      </TableRow>
+    </TableHeader>
+  </Table>
 </template>
 <style scoped></style>
