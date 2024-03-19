@@ -17,9 +17,10 @@ let activeButtonContacts = ref(false)
             activeButtonAbout = true
             activeButtonTV = false
             activeButtonContacts = false
+            $router.push('/about')
           }
         "
-        ><RouterLink to="/about">О КОМПАНИИ</RouterLink></Button
+        >О КОМПАНИИ</Button
       >
       <Button>НОВОСТИ</Button>
       <Button>ВИДЕОНОВОСТИ</Button>
@@ -30,9 +31,10 @@ let activeButtonContacts = ref(false)
             activeButtonAbout = false
             activeButtonTV = true
             activeButtonContacts = false
+            $router.push('/tv')
           }
         "
-        ><RouterLink to="/tv">ТЕЛЕВИДЕНИЕ</RouterLink></Button
+        >ТЕЛЕВИДЕНИЕ</Button
       >
       <Button>&nbsp;&nbsp;&nbsp;&nbsp;АБОНЕНТАМ&nbsp;&nbsp;&nbsp;</Button>
       <Button
@@ -42,9 +44,10 @@ let activeButtonContacts = ref(false)
             activeButtonAbout = false
             activeButtonTV = false
             activeButtonContacts = true
+            $router.push('/contacts')
           }
         "
-        ><RouterLink to="/contacts">КОНТАКТЫ</RouterLink></Button
+        >КОНТАКТЫ</Button
       >
     </div>
     <RouterView></RouterView>

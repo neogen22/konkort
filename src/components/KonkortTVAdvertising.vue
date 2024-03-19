@@ -367,5 +367,164 @@ import {
       </TableRow>
     </TableHeader>
   </Table>
+  <h2 class="text-black text-xl text-center mt-6 font-semibold">
+    Размещение рекламных видеороликов
+  </h2>
+  <Table class="mt-4"
+    ><TableHeader>
+      <TableRow>
+        <TableHead class="text-center">Ролик</TableHead>
+        <TableHead class="text-center">1 неделя<br />7 дней</TableHead>
+        <TableHead class="text-center">2 недели <br />14 дней</TableHead>
+        <TableHead class="text-center"
+          >3 недели<br />
+          21 день</TableHead
+        >
+        <TableHead class="text-center">4 недели <br />28 дней</TableHead>
+        <TableHead class="text-center"
+          >5 недель<br />
+          35 дней</TableHead
+        >
+        <TableHead class="text-center"
+          >6 недель<br />
+          42 дня</TableHead
+        >
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell class="text-center"></TableCell>
+        <TableCell class="text-center"></TableCell>
+        <TableCell class="text-center">Скидка 10%</TableCell>
+        <TableCell class="text-center">Скидка 15%</TableCell>
+        <TableCell class="text-center">Скидка 20%</TableCell>
+        <TableCell class="text-center">Скидка 25%</TableCell>
+        <TableCell class="text-center">Скидка 30%</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center">5 секунд</TableCell>
+        <TableCell class="text-center">1170</TableCell>
+        <TableCell class="text-center">2100</TableCell>
+        <TableCell class="text-center">2980</TableCell>
+        <TableCell class="text-center">3700</TableCell>
+        <TableCell class="text-center">4380</TableCell>
+        <TableCell class="text-center">4900</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center">10 секунд</TableCell>
+        <TableCell class="text-center">2300</TableCell>
+        <TableCell class="text-center">4100</TableCell>
+        <TableCell class="text-center">5860</TableCell>
+        <TableCell class="text-center">7360</TableCell>
+        <TableCell class="text-center">8600</TableCell>
+        <TableCell class="text-center">9660</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center">15 секунд</TableCell>
+        <TableCell class="text-center">3500</TableCell>
+        <TableCell class="text-center">6300</TableCell>
+        <TableCell class="text-center">8900</TableCell>
+        <TableCell class="text-center">11200</TableCell>
+        <TableCell class="text-center">13100</TableCell>
+        <TableCell class="text-center">14700</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center">20 секунд</TableCell>
+        <TableCell class="text-center">4600</TableCell>
+        <TableCell class="text-center">8280</TableCell>
+        <TableCell class="text-center">11700</TableCell>
+        <TableCell class="text-center">14700</TableCell>
+        <TableCell class="text-center">17250</TableCell>
+        <TableCell class="text-center">19300</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center">25 секунд</TableCell>
+        <TableCell class="text-center">5800</TableCell>
+        <TableCell class="text-center">10400</TableCell>
+        <TableCell class="text-center">14800</TableCell>
+        <TableCell class="text-center">18500</TableCell>
+        <TableCell class="text-center">21750</TableCell>
+        <TableCell class="text-center">24360</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center">25 секунд</TableCell>
+        <TableCell class="text-center">7000</TableCell>
+        <TableCell class="text-center">12600</TableCell>
+        <TableCell class="text-center">17850</TableCell>
+        <TableCell class="text-center">22400</TableCell>
+        <TableCell class="text-center">26250</TableCell>
+        <TableCell class="text-center">29400</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <p class="mt-2 indent-4">Минимальная оплата за однодневную рекламу - 1000 рублей.</p>
+  <p class="mt-2 indent-4">
+    Время размещения: со вторника по пятницу; с пятницы по вторник; 07:00; 10:00; 13:00; 17:00;
+    19:00; 22:00; 00:00.
+  </p>
+  <h2 class="text-black text-xl text-center mt-6 font-semibold">
+    Размещение объявлений для физических и юридических лиц на телеканале "КТВК"
+  </h2>
+  <Table class="mt-4"
+    ><TableHeader>
+      <TableRow>
+        <TableHead class="text-center">№ п/п</TableHead>
+        <TableHead class="text-center">Наименование услуги</TableHead>
+        <TableHead class="text-center">Кол-во, доп условия</TableHead>
+        <TableHead class="text-center">Цена</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell class="text-center w-[80px]">1</TableCell>
+        <TableCell class="text-center w-[600px]"
+          >Размещение рекламы от физических и юридических лиц в офисе ООО «Конкорт-1» в виде
+          листовок, визитных карточек, календарей и т.д.
+        </TableCell>
+        <TableCell class="text-center w-[200px]"
+          >до формата листа А5,<br />
+          до 500 экземпляров</TableCell
+        >
+        <TableCell class="text-center">500 рублей</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center w-[80px]">2</TableCell>
+        <TableCell class="text-center w-[600px]"
+          >Размещение рекламы от физических и юридических лиц в офисе ООО «Конкорт-1» в виде
+          баннеров, плакатов на стенах и дверях офиса
+        </TableCell>
+        <TableCell class="text-center"
+          >до формата листа А3,<br />
+          1 экземпляр</TableCell
+        >
+        <TableCell class="text-center">1000 рублей в месяц</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center w-[80px]">3</TableCell>
+        <TableCell class="text-center w-[600px]">Ксерокопии документов, формат листа А4 </TableCell>
+        <TableCell class="text-center">1 сторона листа</TableCell>
+        <TableCell class="text-center">5 рублей</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell class="text-center w-[80px]">4</TableCell>
+        <TableCell class="text-center w-[600px]"
+          >Размещение объявлений для физических лиц на телеканале «КТВК» (за 1 объявление) –
+          объявление от физического лица для физического лица без упоминания организаций</TableCell
+        >
+        <TableCell class="text-center"
+          >до 15 слов, 7 дней<br />до 15 слов, 11 дней<br />до 15 слов, 7 дней с фотографией<br />до
+          15 слов, 11 дней с фотографией</TableCell
+        >
+        <TableCell class="text-center align-top"
+          >безвозмездно <br />30 рублей<br />50 рублей<br /><br />70 рублей</TableCell
+        >
+      </TableRow>
+    </TableBody>
+  </Table>
+  <h1 class="text-black text-2xl text-center mt-4">
+    Реклама на телевидении - идеальное средство для демонстрации имиджа, продукта и услуг Вашей
+    компании. Наибольшую эффективность рекламы на ТВ обеспечивает комплексное решение. Мы сделаем
+    так, чтобы Вас обязательно увидели!
+  </h1>
 </template>
 <style scoped></style>

@@ -5,12 +5,12 @@ import { Button } from '@/components/ui/button'
 
 <template>
   <div class="grid mt-4 grid-cols-2 gap-2 self-center md:grid-cols-3">
-    <Button><RouterLink to="/tv/podkl" class="w-auto">Как подключиться</RouterLink></Button>
+    <Button class="w-auto" @click="$router.push('/tv/podkl')">Как подключиться</Button>
     <Button class="w-auto">Оборудование</Button>
-    <Button class="w-auto"><RouterLink to="/tv/channels">Каналы</RouterLink></Button>
+    <Button class="w-auto" @click="$router.push('/tv/channels')">Каналы</Button>
     <Button class="w-auto">Настройка телеканалов</Button>
     <Button class="w-auto">Прейскурант на услуги</Button>
-    <Button class="w-auto"><RouterLink to="/tv/advertising">Реклама на ТВ</RouterLink></Button>
+    <Button class="w-auto" @click="$router.push('/tv/advertising')">Реклама на ТВ</Button>
   </div>
   <RouterView></RouterView>
 
