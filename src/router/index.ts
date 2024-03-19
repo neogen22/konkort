@@ -7,6 +7,7 @@ import KonkortTVPodkluchenie from '@/components/KonkortTVPodkluchenie.vue'
 import KonkortTVMain from '@/components/KonkortTVMain.vue'
 import KonkortTVChannels from '@/components/KonkortTVChannels.vue'
 import KonkortTVAdvertising from '@/components/KonkortTVAdvertising.vue'
+import KonkortTVPriceList from '@/components/KonkortTVPriceList.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,8 +31,8 @@ const router = createRouter({
           component: KonkortTVMain
         },
         {
-          path: 'podkl',
-          name: 'podkl',
+          path: 'connect',
+          name: 'connect',
           component: KonkortTVPodkluchenie
         },
         {
@@ -43,7 +44,8 @@ const router = createRouter({
           path: 'advertising',
           name: 'advertising',
           component: KonkortTVAdvertising
-        }
+        },
+        { path: 'price-list', name: 'price-list', component: KonkortTVPriceList }
       ]
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route

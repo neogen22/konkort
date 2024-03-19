@@ -1,16 +1,69 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { Button } from '@/components/ui/button'
+import { useRoute, useRouter } from 'vue-router'
+const route = useRouter()
+let activeButtonAdvertising = false
+let activeButtonСonnect = false
+let activeButtonChannels = false
+let activeButtonPriceList = false
+const activateAdvertising = () => {
+  activeButtonAdvertising = true
+  activeButtonСonnect = false
+  activeButtonChannels = false
+  activeButtonPriceList = false
+  route.push({
+    path: '/tv/advertising'
+  })
+}
+const activateConnect = () => {
+  activeButtonAdvertising = false
+  activeButtonСonnect = true
+  activeButtonChannels = false
+  activeButtonPriceList = false
+  route.push({
+    path: '/tv/connect'
+  })
+}
+const activateChannels = () => {
+  activeButtonAdvertising = false
+  activeButtonСonnect = false
+  activeButtonChannels = true
+  activeButtonPriceList = false
+  route.push({
+    path: '/tv/channels'
+  })
+}
+const activatePriceList = () => {
+  activeButtonAdvertising = false
+  activeButtonСonnect = false
+  activeButtonChannels = false
+  activeButtonPriceList = true
+  route.push({
+    path: '/tv/price-list'
+  })
+}
 </script>
 
 <template>
   <div class="grid mt-4 grid-cols-2 gap-2 self-center md:grid-cols-3">
-    <Button class="w-auto" @click="$router.push('/tv/podkl')">Как подключиться</Button>
+    <Button class="w-auto" :class="{ anime: activeButtonСonnect }" @click="activateConnect()"
+      >Как подключиться</Button
+    >
     <Button class="w-auto">Оборудование</Button>
-    <Button class="w-auto" @click="$router.push('/tv/channels')">Каналы</Button>
+    <Button class="w-auto" :class="{ anime: activeButtonChannels }" @click="activateChannels()"
+      >Каналы</Button
+    >
     <Button class="w-auto">Настройка телеканалов</Button>
-    <Button class="w-auto">Прейскурант на услуги</Button>
-    <Button class="w-auto" @click="$router.push('/tv/advertising')">Реклама на ТВ</Button>
+    <Button class="w-auto" :class="{ anime: activeButtonPriceList }" @click="activatePriceList()"
+      >Прейскурант на услуги</Button
+    >
+    <Button
+      class="w-auto"
+      :class="{ anime: activeButtonAdvertising }"
+      @click="activateAdvertising()"
+      >Реклама на ТВ</Button
+    >
   </div>
   <RouterView></RouterView>
 
@@ -147,3 +200,21 @@ import { Button } from '@/components/ui/button'
     спутникового оборудования для просмотра телевизионных каналов в цифровом формате вещания.
   </p> -->
 </template>
+<style>
+.anime {
+  text-align: center;
+  outline: 3px rgba(18, 222, 218, 0.895) solid;
+  animation: test 1s infinite;
+}
+@keyframes test {
+  25% {
+    outline-color: rgba(18, 222, 218, 0.895);
+  }
+  50% {
+    outline-color: rgba(91, 247, 244, 0.895);
+  }
+  75% {
+    outline-color: rgba(232, 242, 242, 0.895);
+  }
+}
+</style>
