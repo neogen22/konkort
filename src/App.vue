@@ -18,63 +18,74 @@ let activeButtonContacts = ref(false)
 <template>
   <div class="container mx-auto place-items-center max-w-5xl mt-6">
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList class="">
         <NavigationMenuItem>
-          <NavigationMenuTrigger><p class="w-[200px]">О КОМПАНИИ</p></NavigationMenuTrigger>
+          <NavigationMenuTrigger><p class="w-[180px]">О КОМПАНИИ</p></NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul class="grid">
+            <ul class="grid w-max">
               <NavigationMenuLink
                 ><p
-                  class="w-[250px] text-center title='О нас'"
+                  class="text-center title='О нас' w-[230px]"
                   @click="$router.push(`/tv/advertising`)"
                 >
                   О нас
                 </p></NavigationMenuLink
               >
               <NavigationMenuLink
-                ><p class="w-[250px] text-center title='Услуги'">Услуги</p></NavigationMenuLink
+                ><p class="text-center title='Услуги' w-[230px]">Услуги</p></NavigationMenuLink
               >
               <NavigationMenuLink
-                ><p class="w-[250px] text-center title='Лицензии'">Лицензии</p></NavigationMenuLink
+                ><p class="text-center title='Лицензии' w-[230px]">Лицензии</p></NavigationMenuLink
               >
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger><p class="w-[200px]">ТЕЛЕВИДЕНИЕ</p></NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul class="one m-0 grid list-none gap-x-[10px] p-[22px]">
-              <li><p class="w-[250px] text-center title='Услуги'">Как подключиться</p></li>
-              <NavigationMenuLink
-                ><p class="w-[250px] text-center title='Услуги'">
-                  Оборудование
-                </p></NavigationMenuLink
-              >
-              <NavigationMenuLink
-                ><p class="w-[250px] text-center title='Услуги'">Каналы</p></NavigationMenuLink
-              >
-              <NavigationMenuLink
-                ><p class="w-[250px] text-center title='Услуги'">
-                  Настройка телеканалов
-                </p></NavigationMenuLink
-              >
-              <NavigationMenuLink
-                ><p class="w-[250px] text-center title='Услуги'">
-                  Прейскурант на услуги
-                </p></NavigationMenuLink
-              >
-              <NavigationMenuLink
-                ><p class="w-[250px] text-center title='Услуги'">
-                  Реклама на ТВ
-                </p></NavigationMenuLink
-              >
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem> Новости </NavigationMenuItem>
-        <NavigationMenuItem> Видеоновости </NavigationMenuItem>
+        <NavigationMenuItem
+          class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+          ><p>НОВОСТИ</p></NavigationMenuItem
+        >
+        <NavigationMenu>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger><p class="w-[180px]">ТЕЛЕВИДЕНИЕ</p></NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul class="">
+                <li>
+                  <p class="text-center title='Как подключиться' w-[230px]">Как подключиться</p>
+                </li>
+                <NavigationMenuLink
+                  ><p class="text-center title='Оборудование' w-[230px]">
+                    Оборудование
+                  </p></NavigationMenuLink
+                >
+                <NavigationMenuLink
+                  ><p class="text-center title='Каналы' w-[230px]">Каналы</p></NavigationMenuLink
+                >
+                <NavigationMenuLink
+                  ><p class="text-center title='Настройка телеканалов' w-[230px]">
+                    Настройка телеканалов
+                  </p></NavigationMenuLink
+                >
+                <NavigationMenuLink
+                  ><p class="text-center title='Прейскурант на услуги' w-[230px]">
+                    Прейскурант на услуги
+                  </p></NavigationMenuLink
+                >
+                <NavigationMenuLink
+                  ><p class="text-center title='Реклама на ТВ' w-[230px]">
+                    Реклама на ТВ
+                  </p></NavigationMenuLink
+                >
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem
+            class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+            ><p>КОНТАКТЫ</p></NavigationMenuItem
+          >
+        </NavigationMenu>
       </NavigationMenuList>
     </NavigationMenu>
+
     <RouterView></RouterView>
   </div>
   <!-- <div class="container mx-auto place-items-center max-w-5xl mt-6">
