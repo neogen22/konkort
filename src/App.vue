@@ -2,6 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { Button } from './components/ui/button'
 import { ref } from 'vue'
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger
+} from '@/components/ui/navigation-menu'
 let activeButtonAbout = ref(false)
 let activeButtonTV = ref(false)
 let activeButtonContacts = ref(false)
@@ -9,6 +17,67 @@ let activeButtonContacts = ref(false)
 
 <template>
   <div class="container mx-auto place-items-center max-w-5xl mt-6">
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger><p class="w-[200px]">О КОМПАНИИ</p></NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul class="grid">
+              <NavigationMenuLink
+                ><p
+                  class="w-[250px] text-center title='О нас'"
+                  @click="$router.push(`/tv/advertising`)"
+                >
+                  О нас
+                </p></NavigationMenuLink
+              >
+              <NavigationMenuLink
+                ><p class="w-[250px] text-center title='Услуги'">Услуги</p></NavigationMenuLink
+              >
+              <NavigationMenuLink
+                ><p class="w-[250px] text-center title='Лицензии'">Лицензии</p></NavigationMenuLink
+              >
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger><p class="w-[200px]">ТЕЛЕВИДЕНИЕ</p></NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul class="one m-0 grid list-none gap-x-[10px] p-[22px]">
+              <li><p class="w-[250px] text-center title='Услуги'">Как подключиться</p></li>
+              <NavigationMenuLink
+                ><p class="w-[250px] text-center title='Услуги'">
+                  Оборудование
+                </p></NavigationMenuLink
+              >
+              <NavigationMenuLink
+                ><p class="w-[250px] text-center title='Услуги'">Каналы</p></NavigationMenuLink
+              >
+              <NavigationMenuLink
+                ><p class="w-[250px] text-center title='Услуги'">
+                  Настройка телеканалов
+                </p></NavigationMenuLink
+              >
+              <NavigationMenuLink
+                ><p class="w-[250px] text-center title='Услуги'">
+                  Прейскурант на услуги
+                </p></NavigationMenuLink
+              >
+              <NavigationMenuLink
+                ><p class="w-[250px] text-center title='Услуги'">
+                  Реклама на ТВ
+                </p></NavigationMenuLink
+              >
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem> Новости </NavigationMenuItem>
+        <NavigationMenuItem> Видеоновости </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+    <RouterView></RouterView>
+  </div>
+  <!-- <div class="container mx-auto place-items-center max-w-5xl mt-6">
     <div class="grid grid-cols-2 gap-2 lg:grid-cols-6 md:grid-cols-3">
       <Button
         :class="{ anime: activeButtonAbout }"
@@ -51,7 +120,7 @@ let activeButtonContacts = ref(false)
       >
     </div>
     <RouterView></RouterView>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>
