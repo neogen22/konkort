@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="mt-7">
+  <div class="mt-4">
     <h1 class="text-black text-3xl text-center">О нас</h1>
     <p class="text-black text-base text-justify mt-4">
       OOO «Конкорт-1» предоставляет услуги кабельного телевидения жителям города Кондопоги. Мы
@@ -32,8 +32,4 @@
     </p>
   </div>
 </template>
-<style>
-p {
-  font-family: 'Roboto';
-}
-</style>
+<style scoped></style>

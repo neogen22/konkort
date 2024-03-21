@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-black text-3xl text-center">Услуги, предоставляемые ООО «Конкорт-1»</h1>
+  <h1 class="text-black text-3xl text-center mt-4">Услуги, предоставляемые ООО «Конкорт-1»</h1>
   <p class="text-black text-base mt-4 text-justify">
     ООО «Конкорт-1» - компания, предоставляющая широкий спектр услуг (все услуги предоставляются в
     одном кабеле):

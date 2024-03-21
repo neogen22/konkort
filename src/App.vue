@@ -50,10 +50,8 @@ import {
         >
         <NavigationMenu>
           <NavigationMenuItem>
-            <NavigationMenuTrigger
-              ><p class="w-[180px]" @click="$router.push('/tv')">
-                ТЕЛЕВИДЕНИЕ
-              </p></NavigationMenuTrigger
+            <NavigationMenuTrigger @click="$router.push('/tv')"
+              ><p class="w-[180px]">ТЕЛЕВИДЕНИЕ</p></NavigationMenuTrigger
             >
             <NavigationMenuContent>
               <ul class="">
@@ -102,8 +100,8 @@ import {
 
           <NavigationMenuItem
             @click="$router.push('/contacts')"
-            class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
-            >КОНТАКТЫ</NavigationMenuItem
+            class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
+            ><p>КОНТАКТЫ</p></NavigationMenuItem
           >
         </NavigationMenu>
       </NavigationMenuList>
@@ -158,6 +156,9 @@ import {
 </template>
 
 <style scoped>
+p {
+  font-family: 'Roboto';
+}
 .anime {
   text-align: center;
   outline: 3px rgba(18, 222, 218, 0.895) solid;

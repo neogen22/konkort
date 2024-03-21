@@ -1,6 +1,5 @@
 <template>
-  <h1 class="text-black text-3xl text-center mt-4">Контакты</h1>
-  <h1 class="text-black text-2xl text-center mt-1 font-bold">
+  <h1 class="text-black text-2xl text-center mt-4 font-bold">
     Общество с ограниченной ответственностью «КОНКОРТ-1» (ООО "КОНКОРТ-1")
   </h1>
   <p class="text-black text-base mt-4 text-justify">
