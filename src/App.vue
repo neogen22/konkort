@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { Button } from './components/ui/button'
-import { ref } from 'vue'
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,55 +9,72 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger
 } from '@/components/ui/navigation-menu'
-let activeButtonAbout = ref(false)
-let activeButtonTV = ref(false)
-let activeButtonContacts = ref(false)
 </script>
 
 <template>
   <div class="container mx-auto place-items-center max-w-5xl mt-6">
     <NavigationMenu>
-      <NavigationMenuList class="">
+      <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger><p class="w-[180px]">О КОМПАНИИ</p></NavigationMenuTrigger>
+          <NavigationMenuTrigger @click="$router.push('/')"
+            ><p class="w-[180px]">О КОМПАНИИ</p></NavigationMenuTrigger
+          >
           <NavigationMenuContent>
             <ul class="grid w-max">
               <NavigationMenuLink
                 ><p
-                  class="text-center title='О нас' w-[230px]"
-                  @click="$router.push(`/tv/advertising`)"
+                  class="text-center w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
+                  @click="$router.push(`/about/aboutUs`)"
                 >
                   О нас
                 </p></NavigationMenuLink
               >
-              <NavigationMenuLink
-                ><p class="text-center title='Услуги' w-[230px]">Услуги</p></NavigationMenuLink
-              >
+
               <NavigationMenuLink
                 ><p class="text-center title='Лицензии' w-[230px]">Лицензии</p></NavigationMenuLink
+              >
+              <NavigationMenuLink
+                ><p
+                  class="text-center w-[230px] text-base p-2 cursor-pointer transition ease-in-out delay-150 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+                  @click="$router.push('/about/services')"
+                >
+                  Услуги
+                </p></NavigationMenuLink
               >
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem
-          class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+          class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
           ><p>НОВОСТИ</p></NavigationMenuItem
         >
         <NavigationMenu>
           <NavigationMenuItem>
-            <NavigationMenuTrigger><p class="w-[180px]">ТЕЛЕВИДЕНИЕ</p></NavigationMenuTrigger>
+            <NavigationMenuTrigger
+              ><p class="w-[180px]" @click="$router.push('/tv')">
+                ТЕЛЕВИДЕНИЕ
+              </p></NavigationMenuTrigger
+            >
             <NavigationMenuContent>
               <ul class="">
                 <li>
-                  <p class="text-center title='Как подключиться' w-[230px]">Как подключиться</p>
+                  <p
+                    class="text-center w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
+                    @click="$router.push('/tv/connect')"
+                  >
+                    Как подключиться
+                  </p>
                 </li>
                 <NavigationMenuLink
-                  ><p class="text-center title='Оборудование' w-[230px]">
-                    Оборудование
-                  </p></NavigationMenuLink
+                  ><p class="text-center w-[230px]">Оборудование</p></NavigationMenuLink
                 >
                 <NavigationMenuLink
-                  ><p class="text-center title='Каналы' w-[230px]">Каналы</p></NavigationMenuLink
+                  ><p
+                    class="text-center w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
+                    @click="$router.push('/tv/channels')"
+                  >
+                    Каналы
+                  </p></NavigationMenuLink
                 >
                 <NavigationMenuLink
                   ><p class="text-center title='Настройка телеканалов' w-[230px]">
@@ -66,21 +82,28 @@ let activeButtonContacts = ref(false)
                   </p></NavigationMenuLink
                 >
                 <NavigationMenuLink
-                  ><p class="text-center title='Прейскурант на услуги' w-[230px]">
+                  ><p
+                    class="text-center w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
+                    @click="$router.push('/tv/price-list')"
+                  >
                     Прейскурант на услуги
                   </p></NavigationMenuLink
                 >
-                <NavigationMenuLink
-                  ><p class="text-center title='Реклама на ТВ' w-[230px]">
+                <NavigationMenuLink @click="$router.push('/tv/advertising')"
+                  ><p
+                    class="text-center w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
+                  >
                     Реклама на ТВ
                   </p></NavigationMenuLink
                 >
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
           <NavigationMenuItem
-            class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-            ><p>КОНТАКТЫ</p></NavigationMenuItem
+            @click="$router.push('/contacts')"
+            class="w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
+            >КОНТАКТЫ</NavigationMenuItem
           >
         </NavigationMenu>
       </NavigationMenuList>

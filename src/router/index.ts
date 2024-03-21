@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import KonkortAbout from '@/components/KonkortAbout.vue'
-import KonkortTV from '@/components/KonkortTV.vue'
+import KonkortAboutUsServices from '@/components/KonkortAboutUsServices.vue'
 import KonkortContacts from '@/components/KonkortContacts.vue'
 import KonkortMain from '@/components/KonkortMain.vue'
 import KonkortTVPodkluchenie from '@/components/KonkortTVPodkluchenie.vue'
@@ -8,6 +7,8 @@ import KonkortTVMain from '@/components/KonkortTVMain.vue'
 import KonkortTVChannels from '@/components/KonkortTVChannels.vue'
 import KonkortTVAdvertising from '@/components/KonkortTVAdvertising.vue'
 import KonkortTVPriceList from '@/components/KonkortTVPriceList.vue'
+
+import KonkortAboutUsAboutUs from '@/components/KonkortAboutUsAboutUs.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,12 +20,21 @@ const router = createRouter({
     },
     {
       path: '/about',
-      name: 'about',
-      component: KonkortAbout
+      children: [
+        {
+          path: 'aboutUs',
+          name: 'aboutUs',
+          component: KonkortAboutUsAboutUs
+        },
+        {
+          path: 'services',
+          name: 'services',
+          component: KonkortAboutUsServices
+        }
+      ]
     },
     {
       path: '/tv',
-      component: KonkortTV,
       children: [
         {
           path: '',
