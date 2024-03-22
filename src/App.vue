@@ -55,7 +55,7 @@ function z() {
               </p></NavigationMenuTrigger
             ><NavigationMenuContent>
               <ul>
-                <NavigationMenuLink @click="$router.push('/tv/connect')" class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
+                <NavigationMenuLink as="Button" @click="$router.push('/tv/connect')" class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
                   >
                     Как подключиться
                   </NavigationMenuLink
