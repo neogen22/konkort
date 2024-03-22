@@ -101,7 +101,7 @@ function z() {
         </NavigationMenu>
         <NavigationMenu>
           <NavigationMenuItem>
-            <NavigationMenuTrigger @click="$router.push('/')"
+            <NavigationMenuTrigger @click="$router.push('/')" data-state='open'
               ><p class="text-center w-[110px] md:w-[150px]">О КОМПАНИИ</p></NavigationMenuTrigger
             ><NavigationMenuContent
               ><ul>
@@ -113,7 +113,7 @@ function z() {
                   </p> </NavigationMenuLink
                 ><NavigationMenuLink>
                   <p class="text-center w-[150px] md:w-[200px]">Лицензии</p> </NavigationMenuLink
-                ><NavigationMenuLink @click="$router.push('/about/services')">
+                ><NavigationMenuLink @click="$router.push('/about/services')" asChild>
                   <p
                     class="text-center w-[150px] md:w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
                   >
