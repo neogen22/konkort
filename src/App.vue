@@ -55,11 +55,13 @@ function z() {
               </p></NavigationMenuTrigger
             ><NavigationMenuContent>
               <ul>
-                <NavigationMenuLink @click="$router.push('/tv/connect')" 
-                  ><p class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150">
-                    Как подключиться</p>
-                  </NavigationMenuLink
-                >
+                <NavigationMenuLink @click="$router.push('/tv/connect')"
+                  ><p
+                    class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
+                  >
+                    Как подключиться
+                  </p>
+                </NavigationMenuLink>
                 <NavigationMenuLink
                   ><p
                     class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
@@ -291,3 +293,4 @@ p {
     outline-color: rgba(232, 242, 242, 0.895);
   }
 }
+</style>
