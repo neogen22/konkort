@@ -101,7 +101,7 @@ function z() {
         </NavigationMenu>
         <NavigationMenu>
           <NavigationMenuItem>
-            <NavigationMenuTrigger @click="$router.push('/')" data-state='open'
+            <NavigationMenuTrigger @click="$router.push('/')" data-state='open' aria-expanded='open'
               ><p class="text-center w-[110px] md:w-[150px]">О КОМПАНИИ</p></NavigationMenuTrigger
             ><NavigationMenuContent
               ><ul>
