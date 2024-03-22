@@ -46,7 +46,10 @@ import {
           (оконечного) оборудования (вне зависимости от наличия или отсутствия цифровой приставки с
           СУД STV-Crypt у заявителя).) Для новых пользователей.
         </TableCell>
-        <TableCell class="text-center w-[200px]"></TableCell>
+        <TableCell class="text-center w-[200px]"
+          >Разовая,<br />
+          за 1 единицу оборудования</TableCell
+        >
         <TableCell class="text-center">300.00</TableCell>
       </TableRow>
       <TableRow>
@@ -88,7 +91,10 @@ import {
         <TableCell class="text-justify w-[600px]"
           >То же что и п. 1.1., но для юридических лиц и ЧП.
         </TableCell>
-        <TableCell class="text-center w-[200px]"></TableCell>
+        <TableCell class="text-center w-[200px]"
+          >Разовая,<br />
+          за 1 единицу оборудования</TableCell
+        >
         <TableCell class="text-center">900.00</TableCell>
       </TableRow>
       <TableRow>
@@ -137,7 +143,7 @@ import {
           формата - аналогового или цифрового)
         </TableCell>
         <TableCell class="text-center w-[200px]">Периодическая, ежемесячно</TableCell>
-        <TableCell class="text-center">240.00</TableCell>
+        <TableCell class="text-center">260.00</TableCell>
       </TableRow>
       <TableRow>
         <TableCell class="text-left w-[80px]">1.7.2</TableCell>
@@ -154,7 +160,7 @@ import {
           >доставка сигналов телерадиопрограмм (тарифный план "БАЗОВЫЙ" (цифровой формат))
         </TableCell>
         <TableCell class="text-center w-[200px]">Периодическая, ежемесячно</TableCell>
-        <TableCell class="text-center">120.00+ п.1.7.1</TableCell>
+        <TableCell class="text-center">100.00+ п.1.7.1</TableCell>
       </TableRow>
       <TableRow>
         <TableCell class="text-left w-[80px]">1.8</TableCell>
@@ -170,7 +176,7 @@ import {
           >техническая поддержка и доступ к кабельной сети связи телерадиовещания (не зависит от
           формата - аналогового или цифрового).
         </TableCell>
-        <TableCell class="text-center w-[200px]"></TableCell>
+        <TableCell class="text-center w-[200px]">Периодическая, ежемесячно</TableCell>
         <TableCell class="text-center">360.00</TableCell>
       </TableRow>
       <TableRow>
@@ -179,7 +185,7 @@ import {
           >доставка сигналов телерадиопрограмм (тарифный план "СОЦИАЛЬНЫЙ" (аналоговый или цифровой
           форматы)).
         </TableCell>
-        <TableCell class="text-center w-[200px]"></TableCell>
+        <TableCell class="text-center w-[200px]">Периодическая, ежемесячно</TableCell>
         <TableCell class="text-center">60.00+ п.1.8.1</TableCell>
       </TableRow>
       <TableRow>
@@ -221,7 +227,7 @@ import {
           принимаемых пользовательским (оконечным) оборудованием по письменному заявлению абонента
           до 6 месяцев</TableCell
         >
-        <TableCell class="text-center w-[200px]">Разовая, 1 раз в календарный год</TableCell>
+        <TableCell class="text-center w-[200px]">1 раз в год</TableCell>
         <TableCell class="text-center">Бесплатно</TableCell>
       </TableRow>
     </TableBody>
