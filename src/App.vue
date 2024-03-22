@@ -55,12 +55,10 @@ function z() {
               </p></NavigationMenuTrigger
             ><NavigationMenuContent>
               <ul>
-                <NavigationMenuLink href="/tv/connect"
-                  ><p
-                    class="touch-auto text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Как подключиться
-                  </p></NavigationMenuLink
+                <NavigationMenuLink @click="$router.push('/tv/connect')" 
+                  ><p class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150">
+                    Как подключиться</p>
+                  </NavigationMenuLink
                 >
                 <NavigationMenuLink
                   ><p
@@ -69,7 +67,7 @@ function z() {
                     Оборудование
                   </p></NavigationMenuLink
                 >
-                <NavigationMenuLink href="/tv/channels"
+                <NavigationMenuLink @click="$router.push('/tv/channels')"
                   ><p
                     class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
                   >
@@ -83,7 +81,7 @@ function z() {
                     Настройка телеканалов
                   </p></NavigationMenuLink
                 >
-                <NavigationMenuLink href="/tv/price-list"
+                <NavigationMenuLink @click="$router.push('/tv/price-list')"
                   ><p
                     class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
                   >
@@ -115,7 +113,7 @@ function z() {
                   </p> </NavigationMenuLink
                 ><NavigationMenuLink>
                   <p class="text-center w-[150px] md:w-[200px]">Лицензии</p> </NavigationMenuLink
-                ><NavigationMenuLink @click="$router.push('/about/services')">
+                ><NavigationMenuLink @click="$router.push('/about/services')" asChild>
                   <p
                     class="text-center w-[150px] md:w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
                   >
@@ -293,4 +291,3 @@ p {
     outline-color: rgba(232, 242, 242, 0.895);
   }
 }
-</style>
