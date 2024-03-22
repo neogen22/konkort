@@ -55,9 +55,9 @@ function z() {
               </p></NavigationMenuTrigger
             ><NavigationMenuContent>
               <ul>
-                <NavigationMenuLink as="Button" @click="$router.push('/tv/connect')" class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Как подключиться
+                <NavigationMenuLink @click="$router.push('/tv/connect')" 
+                  ><p class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150">
+                    Как подключиться</p>
                   </NavigationMenuLink
                 >
                 <NavigationMenuLink
@@ -67,7 +67,7 @@ function z() {
                     Оборудование
                   </p></NavigationMenuLink
                 >
-                <NavigationMenuLink href="/tv/channels"
+                <NavigationMenuLink @click="$router.push('/tv/channels')"
                   ><p
                     class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
                   >
@@ -81,7 +81,7 @@ function z() {
                     Настройка телеканалов
                   </p></NavigationMenuLink
                 >
-                <NavigationMenuLink href="/tv/price-list"
+                <NavigationMenuLink @click="$router.push('/tv/price-list')"
                   ><p
                     class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
                   >
