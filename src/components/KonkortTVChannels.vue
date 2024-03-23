@@ -11,10 +11,11 @@
       <p class="text-black text-center">по состоянию на 30.01.2024</p>
       <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
         <span
-          v-for="channel in channelsSocial"
+          v-for="channel of channelsSocial"
+          :key="channel.id"
           class="w-full text-center min-h-7 border-r border-t"
         >
-          {{ channel }}
+          {{ channel.channelName }}
         </span>
       </div>
     </TabsContent>
@@ -23,8 +24,12 @@
       <p class="text-black text-center">по состоянию на 30.01.2024</p>
 
       <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
-        <span v-for="channel in channelsBase" class="w-full text-center min-h-7 border-r border-t">
-          {{ channel }}
+        <span
+          v-for="channel of channelsBase"
+          :key="channel.id"
+          class="w-full text-center min-h-7 border-r border-t"
+        >
+          {{ channel.channelName }}
         </span>
       </div>
     </TabsContent>
@@ -32,8 +37,9 @@
 </template>
 <script setup lang="ts">
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { onMounted, ref, watch } from 'vue'
 
-let channelsSocial = [
+let channelsSocial = ref([
   '2х2',
   'LEOMAX 24',
   'Shopping Live',
@@ -78,8 +84,14 @@ let channelsSocial = [
   'Точка ТВ',
   'Че',
   'Ювелирочка'
-]
-let channelsBase = [
+])
+for (let i = 0; i < channelsSocial.value.length; i += 1) {
+  channelsSocial.value[i] = {
+    id: `${String(i)} ${channelsSocial.value[i]}`,
+    channelName: channelsSocial.value[i]
+  }
+}
+let channelsBase = ref([
   '1 HD',
   '2х2',
   '360 Новости',
@@ -190,16 +202,47 @@ let channelsBase = [
   'ХИТ',
   'Че',
   'Ювелирочка'
-]
-if (channelsSocial.length % 3 !== 0) {
-  while (channelsSocial.length % 3 !== 0) {
-    channelsSocial.push('')
+])
+for (let i = 0; i < channelsBase.value.length; i += 1) {
+  channelsBase.value[i] = {
+    id: `${String(i)} ${channelsBase.value[i]}`,
+    channelName: channelsBase.value[i]
   }
 }
-if (channelsBase.length % 3 !== 0) {
-  while (channelsBase.length % 3 !== 0) {
-    channelsBase.push('')
+console.log(channelsBase.value)
+
+let width = ref(0)
+onMounted(() => {
+  window.addEventListener('resize', () => {
+    width.value = window.innerWidth
+  })
+  if (channelsSocial.value.length % 3 !== 0) {
+    while (channelsSocial.value.length % 3 !== 0) {
+      channelsSocial.value.push({ id: `space`, channelName: '' })
+    }
   }
-}
+  if (channelsBase.value.length % 2 !== 0) {
+    while (channelsBase.value.length % 2 !== 0) {
+      channelsBase.value.push({ id: `space`, channelName: '' })
+    }
+  }
+})
+watch(width, (newWidth) => {
+  if (newWidth >= 1024) {
+    if (channelsSocial.value.length % 3 !== 0) {
+      while (channelsSocial.value.length % 3 !== 0) {
+        channelsSocial.value.push({ id: `space`, channelName: '' })
+      }
+    }
+  }
+  if (newWidth < 1024) {
+    channelsSocial.value = channelsSocial.value.filter((el) => el.channelName !== '')
+    if (channelsSocial.value.length % 2 !== 0) {
+      while (channelsSocial.value.length % 2 !== 0) {
+        channelsSocial.value.push({ id: `space`, channelName: '' })
+      }
+    }
+  }
+})
 </script>
 <style scoped></style>
