@@ -77,31 +77,32 @@ watch(iiii, (newQ) => {
     class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-4 border-0"
   >
     <Menubar
-      class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-4 border-0"
+      class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-2 border-0 md:grid-cols-4 h-16 md:h-10"
     >
-      <div class="hover:bg-slate-100 rounded-md w-[200px] h-10">
+      <div class="hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10">
         <MenubarMenu>
-          <MenubarTrigger class="cursor-pointer w-[200px] h-10 align-middle"
-            ><p class="w-[200px] h-10 pt-[10px]">НОВОСТИ</p></MenubarTrigger
+          <MenubarTrigger class="cursor-pointer w-[150px] lg:w-[200px] h-10 align-middle"
+            ><p class="w-[150px] lg:w-[200px] h-10 pt-[10px]">НОВОСТИ</p></MenubarTrigger
           >
         </MenubarMenu>
       </div>
-      <div class="hover:bg-slate-100 rounded-md w-[200px] h-10">
+      <div class="hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10">
         <MenubarMenu>
           <MenubarTrigger
-            class="cursor-pointer w-[200px] h-10 align-middle"
+            class="cursor-pointer w-[150px] lg:w-[200px] h-10 align-middle"
             @click="$router.push('/contacts')"
             @mouseover="console.log('qqq')"
-            ><p class="w-[200px] h-10 pt-[10px]">КОНТАКТЫ</p></MenubarTrigger
+            ><p class="w-[150px] lg:w-[200px] h-10 pt-[10px]">КОНТАКТЫ</p></MenubarTrigger
           >
         </MenubarMenu>
       </div>
       <MenubarMenu>
-        <MenubarTrigger class="cursor-pointer hover:bg-slate-100 rounded-md w-[200px] h-10"
+        <MenubarTrigger
+          class="cursor-pointer hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10 p-0"
           ><div class="flex place-items-center">
-            <p class="w-[170px] h-10 pt-[10px]">ТЕЛЕВИДЕНИЕ</p>
+            <p class="w-[140px] lg:w-[170px] h-10 pt-[10px]">ТЕЛЕВИДЕНИЕ</p>
             <svg
-              class="ml-[-28px]"
+              class="ml-[-14px] lg:ml-[-28px]"
               width="15px"
               height="24px"
               viewBox="0 0 24 24"
@@ -115,32 +116,49 @@ watch(iiii, (newQ) => {
         ></MenubarTrigger>
 
         <MenubarContent alignOffset="5">
-          <MenubarItem inset @click="route.push('/tv/connect')" class="cursor-pointer p-0">
+          <MenubarItem
+            inset
+            @click="route.push('/tv/connect')"
+            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+          >
             <p class="text-center w-[190px] h-7 pt-1">Как подключиться</p></MenubarItem
           >
-          <MenubarItem inset class="p-0"
+          <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]"
             ><p class="text-center w-[190px] h-7 pt-1 cursor-pointer">Оборудование</p>
           </MenubarItem>
-          <MenubarItem inset @click="$router.push('/tv/channels')" class="cursor-pointer p-0">
+          <MenubarItem
+            inset
+            @click="$router.push('/tv/channels')"
+            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+          >
             <p class="text-center w-[190px] h-7 pt-1">Телеканалы</p>
           </MenubarItem>
-          <MenubarItem inset class="p-0"
+          <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]"
             ><p class="text-center w-[190px] h-7 pt-1 cursor-pointer">Настройка телеканалов</p>
           </MenubarItem>
-          <MenubarItem inset @click="$router.push('/tv/price-list')" class="cursor-pointer p-0">
+          <MenubarItem
+            inset
+            @click="$router.push('/tv/price-list')"
+            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+          >
             <p class="text-center w-[190px] h-7 pt-1">Прейскурант на услуги</p></MenubarItem
           >
-          <MenubarItem inset @click="$router.push('/tv/advertising')" class="cursor-pointer p-0">
+          <MenubarItem
+            inset
+            @click="$router.push('/tv/advertising')"
+            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+          >
             <p class="text-center w-[190px] h-7 pt-1">Реклама на ТВ</p>
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger class="cursor-pointer hover:bg-slate-100 rounded-md w-[200px] h-10 p-0"
+      <MenubarMenu class="w-[200px]">
+        <MenubarTrigger
+          class="cursor-pointer hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10 p-0"
           ><div class="flex place-items-center">
-            <p class="w-[170px] h-10 pt-[10px]">О КОМПАНИИ</p>
+            <p class="w-[140px] lg:w-[170px] h-10 pt-[10px]">О КОМПАНИИ</p>
             <svg
-              class="ml-[-31px]"
+              class="ml-[-15px] lg:ml-[-31px]"
               width="15px"
               height="24px"
               viewBox="0 0 24 24"
@@ -153,15 +171,27 @@ watch(iiii, (newQ) => {
             </svg></div
         ></MenubarTrigger>
 
-        <MenubarContent alignOffset="5">
-          <MenubarItem inset @click="$router.push(`/about/aboutUs`)" class="cursor-pointer p-0">
-            <p class="w-[190px] text-center h-7 pt-1 cursor-pointer">О нас</p></MenubarItem
+        <MenubarContent alignOffset="5" class="">
+          <MenubarItem
+            inset
+            @click="$router.push(`/about/aboutUs`)"
+            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
           >
-          <MenubarItem inset class="p-0">
-            <p class="w-[190px] text-center h-7 pt-1 cursor-pointer">Лицензии</p></MenubarItem
+            <p class="w-[190px] lg:w-[190px] text-center h-7 pt-1 cursor-pointer">
+              О нас
+            </p></MenubarItem
           >
-          <MenubarItem inset @click="$router.push('/about/services')" class="cursor p-0">
-            <p class="w-[190px] text-center h-7 pt-1 cursor-pointer">Услуги</p>
+          <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]">
+            <p class="w-[140px] lg:w-[190px] text-center h-7 pt-1 cursor-pointer">
+              Лицензии
+            </p></MenubarItem
+          >
+          <MenubarItem
+            inset
+            @click="$router.push('/about/services')"
+            class="cursor p-0 w-[140px] lg:w-[190px]"
+          >
+            <p class="w-[140px] lg:w-[190px] text-center h-7 pt-1 cursor-pointer">Услуги</p>
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
