@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRouter } from 'vue-router'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useAttrs } from 'vue'
 
 import {
@@ -11,269 +11,172 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger
 } from '@/components/ui/navigation-menu'
+
+import {
+  Menubar,
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger
+} from '@/components/ui/menubar'
+
 import router from './router'
-
+let iiii = ref(null)
 let route = useRouter()
-
-const what = ref(null)
-function z() {
-  route.push('/tv')
-  let a = useAttrs()
-  console.log(a)
+let count = ref(0)
+let z = (event) => {
+  route.push('/tv/connect')
+  console.log(iiii)
 }
+/* let x = (event) => {
+  what.value.classList.add('hidden')
+  forceRerender()
+} */
+const componentKey = ref(0)
+/* const forceRerender = () => {
+  componentKey.value += 1
+} */
+let q = ref(false)
+function func() {
+  q.value = true
+}
+const what = ref(null)
+
+let strange = ref(null)
+
+let qwerty = ref('3333333333')
+watch(count, (newCount) => {
+  if (count.value === 1) {
+  }
+})
+watch(iiii, (newQ) => {
+  console.log(newQ)
+  for (let i of document.querySelectorAll('.qnopka')) {
+    i.addEventListener('touchstart', (e) => {
+      e.stopPropagation()
+      e.stopImmediatePropagation()
+    })
+    i.addEventListener('touchend', (e) => {
+      e.stopPropagation()
+      e.stopImmediatePropagation()
+    })
+  }
+})
 </script>
 
 <template>
-  <div class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-5xl">
-    <NavigationMenu class="mx-auto">
-      <NavigationMenuList class="grid grid-cols-2 md:grid-cols-4 place-items-center mx-auto">
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            ><p
-              class="pt-[10px] w-[165px] md:w-[198px] text-center group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
-            >
-              НОВОСТИ
-            </p></NavigationMenuLink
-          ></NavigationMenuItem
-        >
-        <NavigationMenuItem>
-          <NavigationMenuLink @click="$router.push('/contacts')"
-            ><p
-              class="pt-[10px] w-[165px] md:w-[198px] text-center group h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
-            >
-              КОНТАКТЫ
-            </p></NavigationMenuLink
-          ></NavigationMenuItem
-        >
-        <NavigationMenu>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger ref="what" href="/tv"
-              ><p
-                class="text-center w-[135px] md:w-[150px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-              >
-                ТЕЛЕВИДЕНИЕ
-              </p></NavigationMenuTrigger
-            ><NavigationMenuContent>
-              <ul>
-                <NavigationMenuLink @click="$router.push('/tv/connect')"
-                  ><p
-                    class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Как подключиться
-                  </p>
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  ><p
-                    class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Оборудование
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink @click="$router.push('/tv/channels')"
-                  ><p
-                    class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Каналы
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink
-                  ><p
-                    class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Настройка телеканалов
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink @click="$router.push('/tv/price-list')"
-                  ><p
-                    class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Прейскурант на услуги
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink @click="$router.push('/tv/advertising')"
-                  ><p
-                    class="text-center w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Реклама на ТВ
-                  </p></NavigationMenuLink
-                >
-              </ul>
-            </NavigationMenuContent></NavigationMenuItem
+  <div
+    class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-4 border-0"
+  >
+    <Menubar
+      class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-4 border-0"
+    >
+      <div class="hover:bg-slate-100 rounded-md w-[200px] h-10">
+        <MenubarMenu>
+          <MenubarTrigger class="cursor-pointer w-[200px] h-10 align-middle"
+            ><p class="w-[200px] h-10 pt-[10px]">НОВОСТИ</p></MenubarTrigger
           >
-        </NavigationMenu>
-        <NavigationMenu>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger @click="$router.push('/')"
-              ><p class="text-center w-[110px] md:w-[150px]">О КОМПАНИИ</p></NavigationMenuTrigger
-            ><NavigationMenuContent
-              ><ul>
-                <NavigationMenuLink @click="$router.push(`/about/aboutUs`)">
-                  <p
-                    class="text-center w-[150px] md:w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    О Нас
-                  </p> </NavigationMenuLink
-                ><NavigationMenuLink>
-                  <p class="text-center w-[150px] md:w-[200px]">Лицензии</p> </NavigationMenuLink
-                ><NavigationMenuLink @click="$router.push('/about/services')" asChild>
-                  <p
-                    class="text-center w-[150px] md:w-[200px] p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Услуги
-                  </p>
-                </NavigationMenuLink>
-              </ul></NavigationMenuContent
-            ></NavigationMenuItem
-          >
-        </NavigationMenu>
-      </NavigationMenuList>
-    </NavigationMenu>
-    <!-- <NavigationMenu>
-      <NavigationMenuList class="grid grid-cols-2">
-        <NavigationMenuItem>
-          <NavigationMenuTrigger @click="$router.push('/')"
-            ><p class="w-[120px] lg:w-[180px]">О КОМПАНИИ</p></NavigationMenuTrigger
-          >
-          <NavigationMenuContent>
-            <ul class="grid w-max">
-              <NavigationMenuLink
-                ><p
-                  class="text-center w-[190px] lg:w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  @click="$router.push(`/about/aboutUs`)"
-                >
-                  О нас
-                </p></NavigationMenuLink
-              >
-
-              <NavigationMenuLink
-                ><p class="text-center title='Лицензии' w-[190px] lg:w-[230px]">
-                  Лицензии
-                </p></NavigationMenuLink
-              >
-              <NavigationMenuLink
-                ><p
-                  class="text-center w-[190px] lg:w-[230px] text-base p-2 cursor-pointer transition ease-in-out delay-150 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
-                  @click="$router.push('/about/services')"
-                >
-                  Услуги
-                </p></NavigationMenuLink
-              >
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem
-          class="w-[168px] lg:w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
-          ><p>НОВОСТИ</p></NavigationMenuItem
-        >
-        <NavigationMenu>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger @click="$router.push('/tv')"
-              ><p class="w-[120px] lg:w-[180px]">ТЕЛЕВИДЕНИЕ</p></NavigationMenuTrigger
-            >
-            <NavigationMenuContent>
-              <ul class="">
-                <NavigationMenuLink @click="$router.push('/tv/connect')">
-                  <p
-                    class="text-center w-[190px] lg:w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Как подключиться
-                  </p>
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  ><p class="text-center w-[190px] lg:w-[230px]">
-                    Оборудование
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink
-                  ><p
-                    class="text-center w-[190px] lg:w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                    @click="$router.push('/tv/channels')"
-                  >
-                    Каналы
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink
-                  ><p class="text-center title='Настройка телеканалов' w-[190px] lg:w-[230px]">
-                    Настройка телеканалов
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink
-                  ><p
-                    class="text-center w-[190px] lg:w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                    @click="$router.push('/tv/price-list')"
-                  >
-                    Прейскурант на услуги
-                  </p></NavigationMenuLink
-                >
-                <NavigationMenuLink @click="$router.push('/tv/advertising')"
-                  ><p
-                    class="text-center w-[190px] lg:w-[230px] text-base p-2 cursor-pointer hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none transition ease-in-out delay-150"
-                  >
-                    Реклама на ТВ
-                  </p></NavigationMenuLink
-                >
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem
+        </MenubarMenu>
+      </div>
+      <div class="hover:bg-slate-100 rounded-md w-[200px] h-10">
+        <MenubarMenu>
+          <MenubarTrigger
+            class="cursor-pointer w-[200px] h-10 align-middle"
             @click="$router.push('/contacts')"
-            class="w-[168px] lg:w-[228px] group inline-flex h-10 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
-            ><p>КОНТАКТЫ</p></NavigationMenuItem
+            @mouseover="console.log('qqq')"
+            ><p class="w-[200px] h-10 pt-[10px]">КОНТАКТЫ</p></MenubarTrigger
           >
-        </NavigationMenu>
-      </NavigationMenuList>
-    </NavigationMenu> -->
+        </MenubarMenu>
+      </div>
+      <MenubarMenu>
+        <MenubarTrigger class="cursor-pointer hover:bg-slate-100 rounded-md w-[200px] h-10"
+          ><div class="flex place-items-center">
+            <p class="w-[170px] h-10 pt-[10px]">ТЕЛЕВИДЕНИЕ</p>
+            <svg
+              class="ml-[-28px]"
+              width="15px"
+              height="24px"
+              viewBox="0 0 24 24"
+              id="magicoon-Filled"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.707,8.707l-9,9a1,1,0,0,1-1.414,0l-9-9A1,1,0,1,1,3.707,7.293L12,15.586l8.293-8.293a1,1,0,1,1,1.414,1.414Z"
+              />
+            </svg></div
+        ></MenubarTrigger>
 
+        <MenubarContent alignOffset="5">
+          <MenubarItem inset @click="route.push('/tv/connect')" class="cursor-pointer p-0">
+            <p class="text-center w-[190px] h-7 pt-1">Как подключиться</p></MenubarItem
+          >
+          <MenubarItem inset class="p-0"
+            ><p class="text-center w-[190px] h-7 pt-1 cursor-pointer">Оборудование</p>
+          </MenubarItem>
+          <MenubarItem inset @click="$router.push('/tv/channels')" class="cursor-pointer p-0">
+            <p class="text-center w-[190px] h-7 pt-1">Телеканалы</p>
+          </MenubarItem>
+          <MenubarItem inset class="p-0"
+            ><p class="text-center w-[190px] h-7 pt-1 cursor-pointer">Настройка телеканалов</p>
+          </MenubarItem>
+          <MenubarItem inset @click="$router.push('/tv/price-list')" class="cursor-pointer p-0">
+            <p class="text-center w-[190px] h-7 pt-1">Прейскурант на услуги</p></MenubarItem
+          >
+          <MenubarItem inset @click="$router.push('/tv/advertising')" class="cursor-pointer p-0">
+            <p class="text-center w-[190px] h-7 pt-1">Реклама на ТВ</p>
+          </MenubarItem>
+        </MenubarContent>
+      </MenubarMenu>
+      <MenubarMenu>
+        <MenubarTrigger class="cursor-pointer hover:bg-slate-100 rounded-md w-[200px] h-10 p-0"
+          ><div class="flex place-items-center">
+            <p class="w-[170px] h-10 pt-[10px]">О КОМПАНИИ</p>
+            <svg
+              class="ml-[-31px]"
+              width="15px"
+              height="24px"
+              viewBox="0 0 24 24"
+              id="magicoon-Filled"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.707,8.707l-9,9a1,1,0,0,1-1.414,0l-9-9A1,1,0,1,1,3.707,7.293L12,15.586l8.293-8.293a1,1,0,1,1,1.414,1.414Z"
+              />
+            </svg></div
+        ></MenubarTrigger>
+
+        <MenubarContent alignOffset="5">
+          <MenubarItem inset @click="$router.push(`/about/aboutUs`)" class="cursor-pointer p-0">
+            <p class="w-[190px] text-center h-7 pt-1 cursor-pointer">О нас</p></MenubarItem
+          >
+          <MenubarItem inset class="p-0">
+            <p class="w-[190px] text-center h-7 pt-1 cursor-pointer">Лицензии</p></MenubarItem
+          >
+          <MenubarItem inset @click="$router.push('/about/services')" class="cursor p-0">
+            <p class="w-[190px] text-center h-7 pt-1 cursor-pointer">Услуги</p>
+          </MenubarItem>
+        </MenubarContent>
+      </MenubarMenu>
+    </Menubar>
     <RouterView></RouterView>
   </div>
-  <!-- <div class="container mx-auto place-items-center max-w-5xl mt-6">
-    <div class="grid grid-cols-2 gap-2 lg:grid-cols-6 md:grid-cols-3">
-      <Button
-        :class="{ anime: activeButtonAbout }"
-        @click="
-          () => {
-            activeButtonAbout = true
-            activeButtonTV = false
-            activeButtonContacts = false
-            $router.push('/about')
-          }
-        "
-        >О КОМПАНИИ</Button
-      >
-      <Button>НОВОСТИ</Button>
-      <Button>ВИДЕОНОВОСТИ</Button>
-      <Button
-        :class="{ anime: activeButtonTV }"
-        @click="
-          () => {
-            activeButtonAbout = false
-            activeButtonTV = true
-            activeButtonContacts = false
-            $router.push('/tv')
-          }
-        "
-        >ТЕЛЕВИДЕНИЕ</Button
-      >
-      <Button>&nbsp;&nbsp;&nbsp;&nbsp;АБОНЕНТАМ&nbsp;&nbsp;&nbsp;</Button>
-      <Button
-        :class="{ anime: activeButtonContacts }"
-        @click="
-          () => {
-            activeButtonAbout = false
-            activeButtonTV = false
-            activeButtonContacts = true
-            $router.push('/contacts')
-          }
-        "
-        >КОНТАКТЫ</Button
-      >
-    </div>
-    <RouterView></RouterView>
-  </div> -->
 </template>
 
 <style scoped>
+.Menubar {
+  display: grid !important;
+}
+.super {
+  z-index: 200;
+}
 p {
   font-family: 'Roboto';
 }
