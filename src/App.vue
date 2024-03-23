@@ -55,11 +55,11 @@ import router from './router'
       </div>
       <MenubarMenu>
         <MenubarTrigger
-          class="cursor-pointer hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10 p-0"
+          class="cursor-pointer hover:bg-slate-100 rounded-md w-[300px] md:w-[150px] lg:w-[200px] h-10 p-0"
           ><div class="flex place-items-center">
-            <p class="w-[140px] lg:w-[170px] h-10 pt-[10px]">ТЕЛЕВИДЕНИЕ</p>
+            <p class="w-[300px] md:w-[150px] lg:w-[170px] h-10 pt-[10px]">ТЕЛЕВИДЕНИЕ</p>
             <svg
-              class="ml-[-14px] lg:ml-[-28px]"
+              class="ml-[-95px] md:ml-[-14px] lg:ml-[-28px]"
               width="15px"
               height="24px"
               viewBox="0 0 24 24"
@@ -76,25 +76,25 @@ import router from './router'
           <MenubarItem
             inset
             @click="router.push('/tv/connect')"
-            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+            class="cursor-pointer p-0 w-[290px] md:w-[140px] lg:w-[190px]"
           >
-            <p class="text-center w-[190px] h-7 pt-1">Как подключиться</p></MenubarItem
+            <p class="text-center w-[290px] md:w-[190px] h-7 pt-1">Как подключиться</p></MenubarItem
           >
           <MenubarSeparator />
-          <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]"
-            ><p class="text-center w-[190px] h-7 pt-1 cursor-pointer">Оборудование</p>
+          <MenubarItem inset class="p-0 w-[290px] md:w-[140px] lg:w-[190px]"
+            ><p class="text-center w-[290px] md:w-[190px] h-7 pt-1 cursor-pointer">Оборудование</p>
           </MenubarItem>
           <MenubarSeparator />
           <MenubarItem
             inset
             @click="$router.push('/tv/channels')"
-            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+            class="cursor-pointer p-0 w-[290px] md:w-[140px] lg:w-[190px]"
           >
-            <p class="text-center w-[190px] h-7 pt-1">Телеканалы</p>
+            <p class="text-center w-[290px] md:w-[190px] h-7 pt-1">Телеканалы</p>
           </MenubarItem>
           <MenubarSeparator />
-          <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]"
-            ><p class="text-center w-[190px] h-12 pt-1 cursor-pointer lg:h-7">
+          <MenubarItem inset class="p-0 w-[290px] md:w-[140px] lg:w-[190px]"
+            ><p class="text-center w-[290px] md:w-[190px] h-7 md:h-12 pt-1 cursor-pointer lg:h-7">
               Настройка телеканалов
             </p>
           </MenubarItem>
@@ -102,27 +102,29 @@ import router from './router'
           <MenubarItem
             inset
             @click="$router.push('/tv/price-list')"
-            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+            class="cursor-pointer p-0 w-[290px] md:w-[140px] lg:w-[190px]"
           >
-            <p class="text-center w-[190px] h-12 pt-1 lg:h-7">Прейскурант на услуги</p></MenubarItem
+            <p class="text-center w-[290px] md:w-[190px] h-7 md:h-12 pt-1 lg:h-7">
+              Прейскурант на услуги
+            </p></MenubarItem
           >
           <MenubarSeparator />
           <MenubarItem
             inset
             @click="$router.push('/tv/advertising')"
-            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+            class="cursor-pointer p-0 w-[290px] md:w-[140px] lg:w-[190px]"
           >
-            <p class="text-center w-[190px] h-7 pt-1">Реклама на ТВ</p>
+            <p class="text-center w-[290px] md:w-[190px] h-7 pt-1">Реклама на ТВ</p>
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger
-          class="cursor-pointer hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10 p-0"
+          class="cursor-pointer hover:bg-slate-100 rounded-md w-[300px] md:w-[150px] lg:w-[200px] h-10 p-0"
           ><div class="flex place-items-center">
-            <p class="w-[140px] lg:w-[170px] h-10 pt-[10px]">О КОМПАНИИ</p>
+            <p class="w-[300px] md:w-[150px] lg:w-[170px]">О КОМПАНИИ</p>
             <svg
-              class="ml-[-15px] lg:ml-[-31px]"
+              class="ml-[-100px] md:ml-[-15px] lg:ml-[-31px]"
               width="15px"
               height="24px"
               viewBox="0 0 24 24"
@@ -139,15 +141,15 @@ import router from './router'
           <MenubarItem
             inset
             @click="$router.push(`/about/aboutUs`)"
-            class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
+            class="cursor-pointer p-0 w-[290px] md:w-[140px] lg:w-[190px]"
           >
-            <p class="w-[190px] lg:w-[190px] text-center h-7 pt-1 cursor-pointer">
+            <p class="text-center w-[290px] md:w-[190px] lg:w-[300px] h-7 pt-1 cursor-pointer">
               О нас
             </p></MenubarItem
           >
           <MenubarSeparator />
-          <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]">
-            <p class="w-[140px] lg:w-[190px] text-center h-7 pt-1 cursor-pointer">
+          <MenubarItem inset class="p-0 w-[290px] md:w-[140px] lg:w-[190px]">
+            <p class="text-center w-[290px] md:w-[190px] lg:w-[300px] h-7 pt-1 cursor-pointer">
               Лицензии
             </p></MenubarItem
           >
@@ -155,9 +157,11 @@ import router from './router'
           <MenubarItem
             inset
             @click="$router.push('/about/services')"
-            class="cursor p-0 w-[140px] lg:w-[190px]"
+            class="cursor p-0 w-[290px] md:w-[140px] lg:w-[190px]"
           >
-            <p class="w-[140px] lg:w-[190px] text-center h-7 pt-1 cursor-pointer">Услуги</p>
+            <p class="text-center w-[290px] md:w-[190px] lg:w-[300px] h-7 pt-1 cursor-pointer">
+              Услуги
+            </p>
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
