@@ -41,13 +41,13 @@ import router from './router'
           >
         </MenubarMenu>
       </div>
-      <div class="hover:bg-slate-100 rounded-md w-[175px] md:w-[150px] lg:w-[200px] h-10">
+      <div class="hover:bg-slate-100 rounded-md w-[165px] md:w-[150px] lg:w-[200px] h-10">
         <MenubarMenu>
           <MenubarTrigger
-            class="cursor-pointer w-[175px] md:w-[150px] lg:w-[200px] h-10 align-middle"
+            class="cursor-pointer w-[165px] md:w-[150px] lg:w-[200px] h-10 align-middle"
             @click="$router.push('/contacts')"
             @mouseover="console.log('qqq')"
-            ><p class="w-[175px] md:w-[150px] lg:w-[200px] h-10 pt-[10px]">
+            ><p class="w-[165px] md:w-[150px] lg:w-[200px] h-10 pt-[10px]">
               КОНТАКТЫ
             </p></MenubarTrigger
           >
