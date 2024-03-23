@@ -1,16 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView, useRouter } from 'vue-router'
-import { ref, onMounted, watch } from 'vue'
-import { useAttrs } from 'vue'
-
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger
-} from '@/components/ui/navigation-menu'
+import { RouterView } from 'vue-router'
 
 import {
   Menubar,
@@ -29,70 +18,38 @@ import {
 } from '@/components/ui/menubar'
 
 import router from './router'
-let iiii = ref(null)
-let route = useRouter()
-let count = ref(0)
-let z = (event) => {
-  route.push('/tv/connect')
-  console.log(iiii)
-}
-/* let x = (event) => {
-  what.value.classList.add('hidden')
-  forceRerender()
-} */
-const componentKey = ref(0)
-/* const forceRerender = () => {
-  componentKey.value += 1
-} */
-let q = ref(false)
-function func() {
-  q.value = true
-}
-const what = ref(null)
-
-let strange = ref(null)
-
-let qwerty = ref('3333333333')
-watch(count, (newCount) => {
-  if (count.value === 1) {
-  }
-})
-watch(iiii, (newQ) => {
-  console.log(newQ)
-  for (let i of document.querySelectorAll('.qnopka')) {
-    i.addEventListener('touchstart', (e) => {
-      e.stopPropagation()
-      e.stopImmediatePropagation()
-    })
-    i.addEventListener('touchend', (e) => {
-      e.stopPropagation()
-      e.stopImmediatePropagation()
-    })
-  }
-})
 </script>
 
 <template>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
   <div
     class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-4 border-0"
   >
     <Menubar
-      class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-2 border-0 md:grid-cols-4 h-16 md:h-10"
+      class="container mx-auto max-w-2xl mt-6 lg:max-w-4xl grid-cols-2 border-0 md:grid-cols-4 h-16 md:h-10 mb-10"
     >
-      <div class="hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10">
+      <div class="hover:bg-slate-100 rounded-md w-[300px] md:w-[150px] lg:w-[200px] h-10">
         <MenubarMenu>
-          <MenubarTrigger class="cursor-pointer w-[150px] lg:w-[200px] h-10 align-middle"
-            ><p class="w-[150px] lg:w-[200px] h-10 pt-[10px]">НОВОСТИ</p></MenubarTrigger
+          <MenubarTrigger
+            class="cursor-pointer w-[300px] md:w-[150px] lg:w-[200px] h-10 align-middle"
+            ><p class="w-[300px] md:w-[150px] lg:w-[200px] h-10 pt-[10px]">
+              НОВОСТИ
+            </p></MenubarTrigger
           >
         </MenubarMenu>
       </div>
-      <div class="hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10">
+      <div class="hover:bg-slate-100 rounded-md w-[300px] md:w-[150px] lg:w-[200px] h-10">
         <MenubarMenu>
           <MenubarTrigger
-            class="cursor-pointer w-[150px] lg:w-[200px] h-10 align-middle"
+            class="cursor-pointer w-[300px] md:w-[150px] lg:w-[200px] h-10 align-middle"
             @click="$router.push('/contacts')"
             @mouseover="console.log('qqq')"
-            ><p class="w-[150px] lg:w-[200px] h-10 pt-[10px]">КОНТАКТЫ</p></MenubarTrigger
+            ><p class="w-[300px] md:w-[150px] lg:w-[200px] h-10 pt-[10px]">
+              КОНТАКТЫ
+            </p></MenubarTrigger
           >
         </MenubarMenu>
       </div>
@@ -118,14 +75,16 @@ watch(iiii, (newQ) => {
         <MenubarContent alignOffset="5">
           <MenubarItem
             inset
-            @click="route.push('/tv/connect')"
+            @click="router.push('/tv/connect')"
             class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
           >
             <p class="text-center w-[190px] h-7 pt-1">Как подключиться</p></MenubarItem
           >
+          <MenubarSeparator />
           <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]"
             ><p class="text-center w-[190px] h-7 pt-1 cursor-pointer">Оборудование</p>
           </MenubarItem>
+          <MenubarSeparator />
           <MenubarItem
             inset
             @click="$router.push('/tv/channels')"
@@ -133,16 +92,21 @@ watch(iiii, (newQ) => {
           >
             <p class="text-center w-[190px] h-7 pt-1">Телеканалы</p>
           </MenubarItem>
+          <MenubarSeparator />
           <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]"
-            ><p class="text-center w-[190px] h-7 pt-1 cursor-pointer">Настройка телеканалов</p>
+            ><p class="text-center w-[190px] h-12 pt-1 cursor-pointer lg:h-7">
+              Настройка телеканалов
+            </p>
           </MenubarItem>
+          <MenubarSeparator />
           <MenubarItem
             inset
             @click="$router.push('/tv/price-list')"
             class="cursor-pointer p-0 w-[140px] lg:w-[190px]"
           >
-            <p class="text-center w-[190px] h-7 pt-1">Прейскурант на услуги</p></MenubarItem
+            <p class="text-center w-[190px] h-12 pt-1 lg:h-7">Прейскурант на услуги</p></MenubarItem
           >
+          <MenubarSeparator />
           <MenubarItem
             inset
             @click="$router.push('/tv/advertising')"
@@ -152,7 +116,7 @@ watch(iiii, (newQ) => {
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
-      <MenubarMenu class="w-[200px]">
+      <MenubarMenu>
         <MenubarTrigger
           class="cursor-pointer hover:bg-slate-100 rounded-md w-[150px] lg:w-[200px] h-10 p-0"
           ><div class="flex place-items-center">
@@ -181,11 +145,13 @@ watch(iiii, (newQ) => {
               О нас
             </p></MenubarItem
           >
+          <MenubarSeparator />
           <MenubarItem inset class="p-0 w-[140px] lg:w-[190px]">
             <p class="w-[140px] lg:w-[190px] text-center h-7 pt-1 cursor-pointer">
               Лицензии
             </p></MenubarItem
           >
+          <MenubarSeparator />
           <MenubarItem
             inset
             @click="$router.push('/about/services')"
@@ -200,15 +166,14 @@ watch(iiii, (newQ) => {
   </div>
 </template>
 
-<style scoped>
-.Menubar {
-  display: grid !important;
+<style>
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
-.super {
-  z-index: 200;
-}
-p {
-  font-family: 'Roboto';
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .anime {
   text-align: center;

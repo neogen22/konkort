@@ -1,5 +1,8 @@
 <template>
-  <p class="text-black text-base mt-6 text-justify">
+  <h1 class="text-black text-3xl text-center mt-4">
+    Как подключиться к кабельной сети ООО "Конкорт-1"
+  </h1>
+  <p class="text-black text-base mt-4 text-justify">
     ООО "Конкорт-1" предоставляет своим абонентам несколько пакетов программ — "социальный" и
     "базовый". Возможность смотреть программы в цифровом качестве есть у обладателей обоих пакетов.
   </p>
@@ -22,3 +25,8 @@
     телевизоре.
   </p>
 </template>
+<style scoped>
+p {
+  font-family: 'Roboto';
+}
+</style>

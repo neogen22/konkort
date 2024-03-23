@@ -1,13 +1,12 @@
 <template>
   <h1 class="text-black text-3xl text-center mt-4">Список телеканалов</h1>
-
   <Tabs default-value="social" class="mt-4">
     <TabsList class="flex justify-center">
       <TabsTrigger value="social"> Социальный пакет </TabsTrigger>
       <TabsTrigger value="base"> Базовый пакет </TabsTrigger>
     </TabsList>
 
-    <TabsContent value="social" class="">
+    <TabsContent value="social">
       <h2 class="text-black text-xl text-center mt-4">СОЦИАЛЬНЫЙ ПАКЕТ</h2>
       <p class="text-black text-center">по состоянию на 30.01.2024</p>
       <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
@@ -19,9 +18,10 @@
         </span>
       </div>
     </TabsContent>
-    <TabsContent value="base" class="">
+    <TabsContent value="base">
       <h2 class="text-black text-xl text-center mt-4">БАЗОВЫЙ ПАКЕТ</h2>
       <p class="text-black text-center">по состоянию на 30.01.2024</p>
+
       <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
         <span v-for="channel in channelsBase" class="w-full text-center min-h-7 border-r border-t">
           {{ channel }}
