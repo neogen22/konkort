@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-black text-3xl text-center mt-4">Список телеканалов</h1>
+  <h1 class="text-black text-2xl text-center mt-4">Список телеканалов</h1>
   <Tabs default-value="social" class="mt-4">
     <TabsList class="flex justify-center">
       <TabsTrigger value="social"> Социальный пакет </TabsTrigger>
@@ -216,6 +216,11 @@ onMounted(() => {
   window.addEventListener('resize', () => {
     width.value = window.innerWidth
   })
+  if (channelsSocial.value.length % 2 !== 0) {
+    while (channelsSocial.value.length % 2 !== 0) {
+      channelsSocial.value.push({ id: `space`, channelName: '' })
+    }
+  }
   if (channelsSocial.value.length % 3 !== 0) {
     while (channelsSocial.value.length % 3 !== 0) {
       channelsSocial.value.push({ id: `space`, channelName: '' })
@@ -226,23 +231,57 @@ onMounted(() => {
       channelsBase.value.push({ id: `space`, channelName: '' })
     }
   }
+  if (channelsBase.value.length % 3 !== 0) {
+    while (channelsBase.value.length % 3 !== 0) {
+      channelsBase.value.push({ id: `space`, channelName: '' })
+    }
+  }
 })
 watch(width, (newWidth) => {
   if (newWidth >= 1024) {
     if (channelsSocial.value.length % 3 !== 0) {
+      channelsSocial.value = channelsSocial.value.filter((el) => el.channelName !== '')
       while (channelsSocial.value.length % 3 !== 0) {
         channelsSocial.value.push({ id: `space`, channelName: '' })
       }
     }
+    if (channelsBase.value.length % 3 !== 0) {
+      channelsBase.value = channelsBase.value.filter((el) => el.channelName !== '')
+      while (channelsBase.value.length % 3 !== 0) {
+        channelsBase.value.push({ id: `space`, channelName: '' })
+      }
+    }
   }
   if (newWidth < 1024) {
-    channelsSocial.value = channelsSocial.value.filter((el) => el.channelName !== '')
     if (channelsSocial.value.length % 2 !== 0) {
+      channelsSocial.value = channelsSocial.value.filter((el) => el.channelName !== '')
       while (channelsSocial.value.length % 2 !== 0) {
         channelsSocial.value.push({ id: `space`, channelName: '' })
+      }
+    }
+    if (channelsBase.value.length % 2 !== 0) {
+      channelsBase.value = channelsBase.value.filter((el) => el.channelName !== '')
+      while (channelsBase.value.length % 2 !== 0) {
+        channelsBase.value.push({ id: `space`, channelName: '' })
       }
     }
   }
 })
 </script>
-<style scoped></style>
+<style scoped>
+p,
+tr,
+th,
+h2,
+span {
+  color: #f0eee6;
+}
+h1,
+.selected {
+  color: #cb8741;
+}
+div,
+span {
+  border-color: #769285;
+}
+</style>

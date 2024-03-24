@@ -1,38 +1,87 @@
 <template>
-  <div class="">
-    <h1 class="text-black text-3xl text-center mt-6">Услуги, предоставляемые ООО «Конкорт-1»</h1>
+  <body>
+    <h1 class="text-black text-2xl text-center mt-6">Услуги, предоставляемые ООО «Конкорт-1»</h1>
     <p class="text-black text-base mt-4 text-justify">
       ООО «Конкорт-1» - компания, предоставляющая широкий спектр услуг (все услуги предоставляются в
       одном кабеле):
     </p>
-    <div class="flex mt-4">
-      <svg
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-      >
-        <path
-          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-        />
-      </svg>
-      <p class="indent-6 underline text-justify">цифровое телевидение;</p>
+    <table class="advertising-top mt-4 non-smartphone-table">
+      <tr>
+        <td width="39px" style="vertical-align: top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-tv"
+            viewBox="0 0 16 16"
+            stroke="#cb8741"
+          >
+            <path
+              d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+            />
+          </svg>
+        </td>
+        <td style="vertical-align: top">
+          <p class="text-justify selected">цифровое телевидение</p>
+        </td>
+      </tr>
+      <tr class="mt-2">
+        <td width="39px" style="vertical-align: top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-tv"
+            viewBox="0 0 16 16"
+            stroke="#cb8741"
+          >
+            <path
+              d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+            />
+          </svg>
+        </td>
+        <td style="vertical-align: top">
+          <p class="text-justify selected">городские новости на телеканале "КтвК".</p>
+        </td>
+      </tr>
+    </table>
+    <div class="smartphone-table">
+      <div class="flex mt-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="float-left absolute"
+          viewBox="0 0 16 16"
+          stroke="#cb8741"
+        >
+          <path
+            d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+          />
+        </svg>
+        <p class="indent-7 text-justify selected">цифровое телевидение;</p>
+      </div>
+      <div class="flex mt-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="float-left absolute"
+          viewBox="0 0 16 16"
+          stroke="#cb8741"
+        >
+          <path
+            d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+          />
+        </svg>
+        <p class="indent-7 text-justify selected">городские новости на телеканале "КтвК".</p>
+      </div>
     </div>
-    <div class="flex mt-2">
-      <svg
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-      >
-        <path
-          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-        />
-      </svg>
-      <p class="indent-6 underline text-justify">городские новости на канале "КтвК".</p>
-    </div>
+
     <p class="mt-4 text-justify">
       Мы стремимся сделать жизнь своих абонентов ярче и интереснее. Отличительными чертами компании
       являются: использование современных технологий для предоставления услуг, постоянное расширение
@@ -43,64 +92,170 @@
       ООО «Конкорт-1» предлагает Вам сотрудничество на выгодных условиях.
     </p>
     <p class="mt-4 text-justify">
-      <u
-        ><b><i>Для клиентов кабельной сети</i></b></u
-      >: 2 пакета каналов в кабельной сети в цифровом качестве.
+      <u>Для клиентов кабельной сети</u>: 2 пакета каналов в кабельной сети в цифровом качестве.
     </p>
     <p class="mt-4 text-justify">
       Смотрите городские новости на нашем канале «КтвК» и Вы будете в курсе всех событий районного
       масштаба!
     </p>
-    <p class="mt-4 underline font-bold italic">На канале «КтвК» мы:</p>
-    <div class="flex mt-2">
-      <svg
-        class="z-10 absolute"
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-      >
-        <path
-          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-        />
-      </svg>
-      <p class="indent-11 text-justify">разместим рекламу, объявления, поздравления;</p>
+    <p class="mt-4 underline">На телеканале «КтвК» мы:</p>
+    <table class="advertising-top mt-4 non-smartphone-table">
+      <tr>
+        <td width="39px" style="vertical-align: top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-tv"
+            viewBox="0 0 16 16"
+            stroke="#cb8741"
+          >
+            <path
+              d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+            />
+          </svg>
+        </td>
+        <td style="vertical-align: top">
+          <p class="text-justify selected">разместим рекламу, объявления, поздравления;</p>
+        </td>
+      </tr>
+      <tr class="mt-2">
+        <td width="39px" style="vertical-align: top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-tv"
+            viewBox="0 0 16 16"
+            stroke="#cb8741"
+          >
+            <path
+              d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+            />
+          </svg>
+        </td>
+        <td style="vertical-align: top">
+          <p class="text-justify selected">поможем в продвижении Вашего бизнеса;</p>
+        </td>
+      </tr>
+      <tr class="mt-2">
+        <td width="39px" style="vertical-align: top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-tv"
+            viewBox="0 0 16 16"
+            stroke="#cb8741"
+          >
+            <path
+              d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+            />
+          </svg>
+        </td>
+        <td style="vertical-align: top">
+          <p class="text-justify selected">
+            осветим все значимые события в жизни Вашего коллектива.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <div class="smartphone-table">
+      <div class="flex mt-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="float-left absolute"
+          viewBox="0 0 16 16"
+          stroke="#cb8741"
+        >
+          <path
+            d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+          />
+        </svg>
+        <p class="indent-7 text-justify selected">разместим рекламу, объявления, поздравления;</p>
+      </div>
+      <div class="flex mt-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="float-left absolute"
+          viewBox="0 0 16 16"
+          stroke="#cb8741"
+        >
+          <path
+            d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+          />
+        </svg>
+        <p class="indent-7 text-justify selected">поможем в продвижении Вашего бизнеса;</p>
+      </div>
+      <div class="flex mt-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="float-left absolute"
+          viewBox="0 0 16 16"
+          stroke="#cb8741"
+        >
+          <path
+            d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
+          />
+        </svg>
+        <p class="indent-7 text-justify selected">
+          осветим все значимые события в жизни Вашего коллектива.
+        </p>
+      </div>
     </div>
-    <div class="flex mt-2">
-      <svg
-        class="z-10 absolute"
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-      >
-        <path
-          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-        />
-      </svg>
-      <p class="indent-11 text-justify">поможем в продвижении Вашего бизнеса;</p>
-    </div>
-    <div class="flex mt-2">
-      <svg
-        class="z-10 absolute"
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-      >
-        <path
-          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-        />
-      </svg>
-      <p class="indent-11 text-justify">осветим все значимые события в жизни Вашего коллектива.</p>
-    </div>
+
     <p class="mt-4">
       Надеемся, что наше предложение вызовет интерес и позволит начать и развить наше
       сотрудничество.
     </p>
-  </div>
+  </body>
 </template>
-<style scoped></style>
+<style scoped>
+h1,
+p {
+  color: #f0eee6;
+}
+
+body {
+  background-color: #0e1212;
+}
+h1,
+.selected {
+  color: #cb8741;
+}
+table tr td {
+  height: 35px;
+}
+svg {
+  min-width: 24px;
+  min-height: 24px;
+}
+@media (width >= 500px) {
+  .non-smartphone-table {
+    display: block;
+  }
+  .smartphone-table {
+    display: none;
+  }
+}
+@media (width < 500px) {
+  .non-smartphone-table {
+    display: none;
+  }
+  .smartphone-table {
+    display: block;
+  }
+}
+</style>

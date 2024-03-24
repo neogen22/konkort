@@ -23,7 +23,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <MenubarRoot
     v-bind="forwarded"
-    :class="cn('grid h-10 items-center gap-x-1 rounded-md border bg-background p-1', props.class)"
+    :class="cn('grid h-10 items-center gap-x-1 rounded-md border', props.class)"
   >
     <slot />
   </MenubarRoot>
