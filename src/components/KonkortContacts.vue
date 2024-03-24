@@ -1,8 +1,6 @@
 <template>
-  <h1 class="text-2xl text-center mt-4 font-semibold">
-    Общество с ограниченной ответственностью «КОНКОРТ-1»
-  </h1>
-  <p class="text-base mt-8 text-justify">
+  <h1 class="text-2xl text-center mt-6">Общество с ограниченной ответственностью «КОНКОРТ-1»</h1>
+  <p class="text-base mt-6 text-justify">
     <span class="font-semibold">Юридический адрес:</span>&nbsp;&nbsp;&nbsp;186220, г.Кондопога,
     пр.Калинина, д.11-б, к.12
   </p>

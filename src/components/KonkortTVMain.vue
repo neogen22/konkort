@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <h1 class="text-black text-3xl text-center mt-4">ТЕЛЕВИДЕНИЕ</h1>
-  <p class="text-black text-base mt-4 text-justify">
+  <h1 class="text-black text-3xl text-center mt-6">ТЕЛЕВИДЕНИЕ</h1>
+  <p class="text-black text-base mt-6 text-justify">
     Услуга цифрового кабельного телевидения – выгодное предложение для зрителя, которого не
     устраивает качество или содержание обычных эфирных, аналоговых каналов.
   </p>

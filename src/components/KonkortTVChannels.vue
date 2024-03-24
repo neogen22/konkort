@@ -1,43 +1,6 @@
-<template>
-  <h1 class="text-black text-2xl text-center mt-4">Список телеканалов</h1>
-  <Tabs default-value="social" class="mt-4">
-    <TabsList class="flex justify-center">
-      <TabsTrigger value="social"> Социальный пакет </TabsTrigger>
-      <TabsTrigger value="base"> Базовый пакет </TabsTrigger>
-    </TabsList>
-
-    <TabsContent value="social">
-      <h2 class="text-black text-xl text-center mt-4">СОЦИАЛЬНЫЙ ПАКЕТ</h2>
-      <p class="text-black text-center">по состоянию на 30.01.2024</p>
-      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
-        <span
-          v-for="channel of channelsSocial"
-          :key="channel.id"
-          class="w-full text-center min-h-7 border-r border-t"
-        >
-          {{ channel.channelName }}
-        </span>
-      </div>
-    </TabsContent>
-    <TabsContent value="base">
-      <h2 class="text-black text-xl text-center mt-4">БАЗОВЫЙ ПАКЕТ</h2>
-      <p class="text-black text-center">по состоянию на 30.01.2024</p>
-
-      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
-        <span
-          v-for="channel of channelsBase"
-          :key="channel.id"
-          class="w-full text-center min-h-7 border-r border-t"
-        >
-          {{ channel.channelName }}
-        </span>
-      </div>
-    </TabsContent>
-  </Tabs>
-</template>
 <script setup lang="ts">
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { onMounted, ref, watch } from 'vue'
+import { onMounted, onBeforeMount, ref, watch } from 'vue'
 
 let channelsSocial = ref([
   '2х2',
@@ -58,7 +21,7 @@ let channelsSocial = ref([
   'НТВ',
   'НТВ Хит',
   'Окино',
-  'Открытый мир Здоровье',
+  'Открытый мир',
   'ОТР',
   'Первый канал',
   'Пёс и Ко',
@@ -100,7 +63,7 @@ let channelsBase = ref([
   'Bridge TV',
   'Bridge TV Classic',
   'Bridge TV Hits',
-  'Bridge TV Русский Хит',
+  'Русский Хит',
   'LEOMAX 24',
   'Luxury',
   'RT',
@@ -152,7 +115,7 @@ let channelsBase = ref([
   'НТВ Хит',
   'О кино',
   'О2ТВ',
-  'Открытый мир Здоровье',
+  'Открытый мир',
   'ОТР',
   'Охота и рыбалка',
   'Охотник и рыболов',
@@ -209,31 +172,36 @@ for (let i = 0; i < channelsBase.value.length; i += 1) {
     channelName: channelsBase.value[i]
   }
 }
-console.log(channelsBase.value)
 
 let width = ref(0)
 onMounted(() => {
+  width.value = window.innerWidth
   window.addEventListener('resize', () => {
     width.value = window.innerWidth
   })
-  if (channelsSocial.value.length % 2 !== 0) {
-    while (channelsSocial.value.length % 2 !== 0) {
-      channelsSocial.value.push({ id: `space`, channelName: '' })
+  if (width.value >= 1024) {
+    if (channelsSocial.value.length % 3 !== 0) {
+      while (channelsSocial.value.length % 3 !== 0) {
+        channelsSocial.value.push({ id: `space`, channelName: '' })
+      }
+    }
+    if (channelsBase.value.length % 3 !== 0) {
+      while (channelsBase.value.length % 3 !== 0) {
+        channelsBase.value.push({ id: `space`, channelName: '' })
+      }
     }
   }
-  if (channelsSocial.value.length % 3 !== 0) {
-    while (channelsSocial.value.length % 3 !== 0) {
-      channelsSocial.value.push({ id: `space`, channelName: '' })
+  if (width.value < 1024) {
+    if (channelsSocial.value.length % 2 !== 0) {
+      while (channelsSocial.value.length % 2 !== 0) {
+        channelsSocial.value.push({ id: `space`, channelName: '' })
+      }
     }
-  }
-  if (channelsBase.value.length % 2 !== 0) {
-    while (channelsBase.value.length % 2 !== 0) {
-      channelsBase.value.push({ id: `space`, channelName: '' })
-    }
-  }
-  if (channelsBase.value.length % 3 !== 0) {
-    while (channelsBase.value.length % 3 !== 0) {
-      channelsBase.value.push({ id: `space`, channelName: '' })
+
+    if (channelsBase.value.length % 2 !== 0) {
+      while (channelsBase.value.length % 2 !== 0) {
+        channelsBase.value.push({ id: `space`, channelName: '' })
+      }
     }
   }
 })
@@ -268,6 +236,44 @@ watch(width, (newWidth) => {
   }
 })
 </script>
+<template>
+  <h1 class="text-black text-2xl text-center mt-6">Список телеканалов</h1>
+  <Tabs default-value="social" class="mt-6">
+    <TabsList class="flex justify-center">
+      <TabsTrigger value="social"> Социальный пакет </TabsTrigger>
+      <TabsTrigger value="base"> Базовый пакет </TabsTrigger>
+    </TabsList>
+
+    <TabsContent value="social">
+      <h2 class="text-black text-xl text-center mt-4">СОЦИАЛЬНЫЙ ПАКЕТ</h2>
+      <p class="text-black text-center">по состоянию на 30.01.2024</p>
+      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
+        <span
+          v-for="channel of channelsSocial"
+          :key="channel.id"
+          class="w-full text-center min-h-7 border-r border-t"
+        >
+          {{ channel.channelName }}
+        </span>
+      </div>
+    </TabsContent>
+    <TabsContent value="base">
+      <h2 class="text-black text-xl text-center mt-4">БАЗОВЫЙ ПАКЕТ</h2>
+      <p class="text-black text-center">по состоянию на 30.01.2024</p>
+
+      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
+        <span
+          v-for="channel of channelsBase"
+          :key="channel.id"
+          class="w-full text-center min-h-7 border-r border-t"
+        >
+          {{ channel.channelName }}
+        </span>
+      </div>
+    </TabsContent>
+  </Tabs>
+</template>
+
 <style scoped>
 p,
 tr,

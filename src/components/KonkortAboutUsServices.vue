@@ -1,7 +1,7 @@
 <template>
   <body>
     <h1 class="text-black text-2xl text-center mt-6">Услуги, предоставляемые ООО «Конкорт-1»</h1>
-    <p class="text-black text-base mt-4 text-justify">
+    <p class="text-black text-base mt-6 text-justify">
       ООО «Конкорт-1» - компания, предоставляющая широкий спектр услуг (все услуги предоставляются в
       одном кабеле):
     </p>
@@ -92,13 +92,14 @@
       ООО «Конкорт-1» предлагает Вам сотрудничество на выгодных условиях.
     </p>
     <p class="mt-4 text-justify">
-      <u>Для клиентов кабельной сети</u>: 2 пакета каналов в кабельной сети в цифровом качестве.
+      <span class="underline underline-offset-2">Для клиентов кабельной сети:</span> 2 пакета
+      каналов в кабельной сети в цифровом качестве.
     </p>
     <p class="mt-4 text-justify">
       Смотрите городские новости на нашем канале «КтвК» и Вы будете в курсе всех событий районного
       масштаба!
     </p>
-    <p class="mt-4 underline">На телеканале «КтвК» мы:</p>
+    <p class="mt-4 underline underline-offset-2">На телеканале «КтвК» мы:</p>
     <table class="advertising-top mt-4 non-smartphone-table">
       <tr>
         <td width="39px" style="vertical-align: top">

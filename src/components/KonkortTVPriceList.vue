@@ -11,8 +11,8 @@ import {
 </script>
 
 <template>
-  <h1 class="text-2xl text-center mt-4">Прейскурант на услуги</h1>
-  <Table class="mt-4"
+  <h1 class="text-2xl text-center mt-6">Прейскурант на услуги</h1>
+  <Table class="mt-6"
     ><TableHeader>
       <TableRow>
         <TableHead class="text-center">№ п/п</TableHead>
