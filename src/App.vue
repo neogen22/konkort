@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import { ref } from 'vue'
 
 import {
   Menubar,
@@ -29,7 +30,7 @@ import router from './router'
     class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-4 border-0 xxx"
   >
     <Menubar
-      class="container mx-auto max-w-2xl mt-6 lg:max-w-4xl grid-cols-2 border-0 md:grid-cols-4 h-14 md:h-8 gap-x-5 mb-8"
+      class="container mx-auto max-w-2xl mt-6 lg:max-w-4xl grid-cols-2 border-0 md:grid-cols-4 h-14 md:h-8 gap-x-5 mb-8 Menubar"
     >
       <div class="rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10">
         <MenubarMenu>
@@ -45,7 +46,7 @@ import router from './router'
           <MenubarTrigger
             class="cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 align-middle MenubarTrigger"
             @click="$router.push('/contacts')"
-            ><p class="w-[140px] md:w-[140px] lg:w-[165px] h-10 pt-[10px]">
+            ><p class="w-[140px] md:w-[140px] lg:w-[165px] h-10 pt-[10px] selection:text-black">
               КОНТАКТЫ
             </p></MenubarTrigger
           >
@@ -54,6 +55,7 @@ import router from './router'
       <MenubarMenu>
         <MenubarTrigger
           class="cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 MenubarTrigger"
+          id="box"
           ><div class="flex place-items-center">
             <p class="w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 pt-[10px]">ТЕЛЕВИДЕНИЕ</p>
             <svg
@@ -180,33 +182,42 @@ import router from './router'
 .MenubarTrigger[aria-expanded='true'] p {
   color: black;
 }
+
 .MenubarTrigger[aria-expanded='true'] svg {
   fill: black;
 }
+
 .MenubarContent[data-state='open'] p {
   color: black;
 }
 .MenubarContent[data-state='open'] p:hover {
   color: white;
-}
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  background-color: #769285;
 }
 
-button:hover,
-div div div:hover {
-  background-color: #769285;
-  border-radius: 0.375rem;
+button:hover {
+  background-color: white;
+  color: black;
 }
+
 div div p {
   color: #f0eee6;
 }
-button {
-  background-color: #0e1212;
-}
+
 p {
   color: #f0eee6;
+}
+div div div:not(:first-child):hover {
+  background-color: #769285;
+  border-radius: 0.375rem;
+}
+.MenubarTrigger:hover * {
+  color: black;
+  fill: black;
+}
+.MenubarTrigger:focus * {
+  color: black;
+  fill: black;
 }
 
 .anime {
