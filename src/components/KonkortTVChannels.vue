@@ -237,7 +237,7 @@ watch(width, (newWidth) => {
 })
 </script>
 <template>
-  <h1 class="text-black text-2xl text-center mt-6">Список телеканалов</h1>
+  <h1 class="!text-orange-400 text-2xl text-center mt-6">Список телеканалов</h1>
   <Tabs default-value="social" class="mt-6">
     <TabsList class="flex justify-center">
       <TabsTrigger value="social"> Социальный пакет </TabsTrigger>
@@ -245,27 +245,31 @@ watch(width, (newWidth) => {
     </TabsList>
 
     <TabsContent value="social">
-      <h2 class="text-black text-xl text-center mt-4">СОЦИАЛЬНЫЙ ПАКЕТ</h2>
-      <p class="text-black text-center">по состоянию на 30.01.2024</p>
-      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
+      <h2 class="text-white text-xl text-center mt-4">СОЦИАЛЬНЫЙ ПАКЕТ</h2>
+      <p class="text-white text-center">по состоянию на 30.01.2024</p>
+      <div
+        class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3 border-teal-600 text-white"
+      >
         <span
           v-for="channel of channelsSocial"
           :key="channel.id"
-          class="w-full text-center min-h-7 border-r border-t"
+          class="w-full text-center min-h-7 border-r border-t border-teal-600 text-white"
         >
           {{ channel.channelName }}
         </span>
       </div>
     </TabsContent>
     <TabsContent value="base">
-      <h2 class="text-black text-xl text-center mt-4">БАЗОВЫЙ ПАКЕТ</h2>
-      <p class="text-black text-center">по состоянию на 30.01.2024</p>
+      <h2 class="text-white text-xl text-center mt-4">БАЗОВЫЙ ПАКЕТ</h2>
+      <p class="text-white text-center">по состоянию на 30.01.2024</p>
 
-      <div class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3">
+      <div
+        class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3 border-teal-600 text-white"
+      >
         <span
           v-for="channel of channelsBase"
           :key="channel.id"
-          class="w-full text-center min-h-7 border-r border-t"
+          class="w-full text-center min-h-7 border-r border-t border-teal-600 text-white"
         >
           {{ channel.channelName }}
         </span>
@@ -274,20 +278,4 @@ watch(width, (newWidth) => {
   </Tabs>
 </template>
 
-<style scoped>
-p,
-tr,
-th,
-h2,
-span {
-  color: #f0eee6;
-}
-h1,
-.selected {
-  color: #cb8741;
-}
-div,
-span {
-  border-color: #769285;
-}
-</style>
+<style scoped></style>

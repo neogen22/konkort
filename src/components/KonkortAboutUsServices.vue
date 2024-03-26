@@ -1,164 +1,146 @@
 <template>
   <body>
-    <h1 class="text-black text-2xl text-center mt-6">Услуги, предоставляемые ООО «Конкорт-1»</h1>
-    <p class="text-black text-base mt-6 text-justify">
+    <h1 class="text-orange-400 text-2xl text-center mt-6">
+      Услуги, предоставляемые ООО «Конкорт-1»
+    </h1>
+    <p class="text-white text-base mt-6 text-justify">
       ООО «Конкорт-1» - компания, предоставляющая широкий спектр услуг (все услуги предоставляются в
       одном кабеле):
     </p>
-    <table class="advertising-top mt-4 non-smartphone-table">
+    <table class="mt-4 non-smartphone-table">
       <tr>
-        <td width="39px" style="vertical-align: top">
+        <td class="h-[35px] w-[39px] align-top">
           <svg
+            class="fill-orange-400"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="currentColor"
-            class="bi bi-tv"
             viewBox="0 0 16 16"
-            stroke="#cb8741"
           >
             <path
               d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
             />
           </svg>
         </td>
-        <td style="vertical-align: top">
-          <p class="text-justify selected">цифровое телевидение</p>
+        <td class="align-top">
+          <p class="text-justify text-orange-400">цифровое телевидение</p>
         </td>
       </tr>
       <tr class="mt-2">
-        <td width="39px" style="vertical-align: top">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            class="bi bi-tv"
-            viewBox="0 0 16 16"
-            stroke="#cb8741"
-          >
+        <td class="h-[35px] w-[39px] fill-orange-400" style="vertical-align: top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
             <path
               d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
             />
           </svg>
         </td>
         <td style="vertical-align: top">
-          <p class="text-justify selected">городские новости на телеканале "КтвК".</p>
+          <p class="text-justify text-orange-400">городские новости на телеканале "КтвК".</p>
         </td>
       </tr>
     </table>
     <div class="smartphone-table">
       <div class="flex mt-2">
         <svg
+          class="fill-orange-400 float-left absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          fill="currentColor"
-          class="float-left absolute"
           viewBox="0 0 16 16"
-          stroke="#cb8741"
         >
           <path
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify selected">цифровое телевидение;</p>
+        <p class="indent-7 text-justify text-orange-400">цифровое телевидение;</p>
       </div>
       <div class="flex mt-2">
         <svg
+          class="fill-orange-400 float-left absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          fill="currentColor"
-          class="float-left absolute"
           viewBox="0 0 16 16"
-          stroke="#cb8741"
         >
           <path
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify selected">городские новости на телеканале "КтвК".</p>
+        <p class="indent-7 text-justify text-orange-400">городские новости на телеканале "КтвК".</p>
       </div>
     </div>
 
-    <p class="mt-4 text-justify">
+    <p class="mt-4 text-justify text-white">
       Мы стремимся сделать жизнь своих абонентов ярче и интереснее. Отличительными чертами компании
       являются: использование современных технологий для предоставления услуг, постоянное расширение
       спектра оказываемых услуг, внимание к Вашим пожеланиям и потребностям. У нас Вы всегда
       получите информационную и техническую поддержку по всем интересующим Вас вопросам.
     </p>
-    <p class="mt-4 text-justify">
+    <p class="mt-4 text-justify text-white">
       ООО «Конкорт-1» предлагает Вам сотрудничество на выгодных условиях.
     </p>
-    <p class="mt-4 text-justify">
-      <span class="underline underline-offset-2">Для клиентов кабельной сети:</span> 2 пакета
-      каналов в кабельной сети в цифровом качестве.
+    <p class="mt-4 text-justify text-white">
+      <span class="underline underline-offset-2 text-white">Для клиентов кабельной сети:</span> 2
+      пакета каналов в кабельной сети в цифровом качестве.
     </p>
-    <p class="mt-4 text-justify">
+    <p class="mt-4 text-justify text-white">
       Смотрите городские новости на нашем канале «КтвК» и Вы будете в курсе всех событий районного
       масштаба!
     </p>
-    <p class="mt-4 underline underline-offset-2">На телеканале «КтвК» мы:</p>
+    <p class="mt-4 underline underline-offset-2 text-white">На телеканале «КтвК» мы:</p>
     <table class="advertising-top mt-4 non-smartphone-table">
       <tr>
-        <td width="39px" style="vertical-align: top">
+        <td class="h-[35px] w-[39px] align-top">
           <svg
+            class="fill-orange-400"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="currentColor"
-            class="bi bi-tv"
             viewBox="0 0 16 16"
-            stroke="#cb8741"
           >
             <path
               d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
             />
           </svg>
         </td>
-        <td style="vertical-align: top">
-          <p class="text-justify selected">разместим рекламу, объявления, поздравления;</p>
+        <td class="align-top">
+          <p class="text-justify text-orange-400">разместим рекламу, объявления, поздравления;</p>
         </td>
       </tr>
       <tr class="mt-2">
-        <td width="39px" style="vertical-align: top">
+        <td class="align-top h-[35px] w-[39px]">
           <svg
+            class="fill-orange-400"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="currentColor"
-            class="bi bi-tv"
             viewBox="0 0 16 16"
-            stroke="#cb8741"
           >
             <path
               d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
             />
           </svg>
         </td>
-        <td style="vertical-align: top">
-          <p class="text-justify selected">поможем в продвижении Вашего бизнеса;</p>
+        <td class="align-top">
+          <p class="text-justify text-orange-400">поможем в продвижении Вашего бизнеса;</p>
         </td>
       </tr>
       <tr class="mt-2">
-        <td width="39px" style="vertical-align: top">
+        <td class="h-[35px] w-[39px] align-top">
           <svg
+            class="fill-orange-400"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="currentColor"
-            class="bi bi-tv"
             viewBox="0 0 16 16"
-            stroke="#cb8741"
           >
             <path
               d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
             />
           </svg>
         </td>
-        <td style="vertical-align: top">
-          <p class="text-justify selected">
+        <td class="align-top">
+          <p class="text-justify text-orange-400">
             осветим все значимые события в жизни Вашего коллектива.
           </p>
         </td>
@@ -167,78 +149,59 @@
     <div class="smartphone-table">
       <div class="flex mt-2">
         <svg
+          class="fill-orange-400 float-left absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          fill="currentColor"
-          class="float-left absolute"
           viewBox="0 0 16 16"
-          stroke="#cb8741"
         >
           <path
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify selected">разместим рекламу, объявления, поздравления;</p>
+        <p class="indent-7 text-justify text-orange-400">
+          разместим рекламу, объявления, поздравления;
+        </p>
       </div>
       <div class="flex mt-2">
         <svg
+          class="fill-orange-400 float-left absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          fill="currentColor"
-          class="float-left absolute"
           viewBox="0 0 16 16"
-          stroke="#cb8741"
         >
           <path
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify selected">поможем в продвижении Вашего бизнеса;</p>
+        <p class="indent-7 text-justify text-orange-400">поможем в продвижении Вашего бизнеса;</p>
       </div>
       <div class="flex mt-2">
         <svg
+          class="fill-orange-400 float-left absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          fill="currentColor"
-          class="float-left absolute"
           viewBox="0 0 16 16"
-          stroke="#cb8741"
         >
           <path
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify selected">
+        <p class="indent-7 text-justify text-orange-400">
           осветим все значимые события в жизни Вашего коллектива.
         </p>
       </div>
     </div>
 
-    <p class="mt-4">
+    <p class="mt-4 text-white">
       Надеемся, что наше предложение вызовет интерес и позволит начать и развить наше
       сотрудничество.
     </p>
   </body>
 </template>
 <style scoped>
-h1,
-p {
-  color: #f0eee6;
-}
-
-body {
-  background-color: #0e1212;
-}
-h1,
-.selected {
-  color: #cb8741;
-}
-table tr td {
-  height: 35px;
-}
 svg {
   min-width: 24px;
   min-height: 24px;

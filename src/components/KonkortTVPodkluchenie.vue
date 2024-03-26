@@ -1,22 +1,24 @@
 <template>
-  <h1 class="text-2xl text-center mt-6">Как подключиться к кабельной сети ООО "Конкорт-1"</h1>
-  <p class="text-base mt-6 text-justify">
+  <h1 class="text-2xl text-center mt-6 text-orange-400">
+    Как подключиться к кабельной сети ООО "Конкорт-1"
+  </h1>
+  <p class="text-base mt-6 text-justify text-white">
     ООО "Конкорт-1" предоставляет своим абонентам несколько пакетов телеканалов — "социальный пакет"
     и "базовый пакет". Возможность смотреть программы в цифровом качестве есть у обладателей обоих
     пакетов.
   </p>
-  <p class="text-base mt-4 text-justify">
+  <p class="text-base mt-4 text-justify text-white">
     Для этого Вам необходимо подойти с паспортом по адресу: ул.Комсомольская, дом 18 и оформить
     договор.
   </p>
-  <p class="text-base mt-4 text-justify">
+  <p class="text-base mt-4 text-justify text-white">
     Стоимость подключения к сети кабельного телевидения — 300 рублей.
   </p>
-  <p class="text-base mt-4 text-justify">
+  <p class="text-base mt-4 text-justify text-white">
     Ежемесячная абонентская плата — от 260 рублей (социальный пакет) до 360 рублей (базовый пакет).
   </p>
-  <p class="text-base mt-4 text-justify">Стоимость цифрового декодера — 1900 рублей.</p>
-  <p class="text-base mt-4 text-justify">
+  <p class="text-base mt-4 text-justify text-white">Стоимость цифрового декодера — 1900 рублей.</p>
+  <p class="text-base mt-4 text-justify text-white">
     Для владельцев телевизоров нового поколения со встроенным цифровым тюнером и с поддержкой
     стандарта DVB-C у нас есть отдельное предложение. Чтобы смотреть программы в цифровом формате по
     нашей кабельной сети, достаточно приобрести у нас модуль декодера. Его стоимость — 1300 рублей.
@@ -25,15 +27,4 @@
     телевизоре.
   </p>
 </template>
-<style scoped>
-p,
-tr,
-th,
-h2 {
-  color: #f0eee6;
-}
-h1,
-.selected {
-  color: #cb8741;
-}
-</style>
+<style scoped></style>

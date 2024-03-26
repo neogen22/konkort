@@ -11,8 +11,8 @@ import {
 </script>
 
 <template>
-  <h1 class="text-2xl text-center mt-6">Прейскурант на услуги</h1>
-  <Table class="mt-6"
+  <h1 class="text-2xl text-center mt-6 text-orange-400">Прейскурант на услуги</h1>
+  <Table class="mt-6 [&>*]:text-white"
     ><TableHeader>
       <TableRow>
         <TableHead class="text-center">№ п/п</TableHead>
@@ -440,17 +440,5 @@ import {
       <TableCell class="text-center">250.00</TableCell>
     </TableRow>
   </Table>
-  <p class="text-black text-center mt-6">Директор ООО "Конкорт-1" ________________ Ометов М.В.</p>
 </template>
-<style scoped>
-p,
-tr,
-th,
-h2 {
-  color: #f0eee6;
-}
-h1,
-.selected {
-  color: #cb8741;
-}
-</style>
+<style scoped></style>
