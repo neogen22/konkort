@@ -32,29 +32,24 @@ import router from './router'
     <Menubar
       class="container mx-auto max-w-2xl mt-6 lg:max-w-4xl grid-cols-2 border-0 md:grid-cols-4 h-14 md:h-8 gap-x-5 mb-8 Menubar"
     >
-      <div class="rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10">
-        <MenubarMenu>
-          <MenubarTrigger
-            class="flex justify-center cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black"
-            ><p class="text-inherit">НОВОСТИ</p></MenubarTrigger
-          >
-        </MenubarMenu>
-      </div>
-      <div class="rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10">
-        <MenubarMenu>
-          <MenubarTrigger
-            class="flex justify-center cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black"
-            @click="$router.push('/contacts')"
-            ><p class="text-inherit">КОНТАКТЫ</p></MenubarTrigger
-          >
-        </MenubarMenu>
-      </div>
+      <MenubarMenu>
+        <MenubarTrigger
+          class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black"
+          ><p class="text-inherit">НОВОСТИ</p></MenubarTrigger
+        >
+      </MenubarMenu>
+      <MenubarMenu>
+        <MenubarTrigger
+          class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black"
+          @click="$router.push('/contacts')"
+          ><p class="text-inherit">КОНТАКТЫ</p></MenubarTrigger
+        >
+      </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger
           class="flex justify-center cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 text-white selection:text-black hover:bg-white hover:text-black"
           id="box"
           ><div class="text-inherit">ТЕЛЕВИДЕНИЕ</div>
-
           <svg
             class="ml-[2px] fill-current"
             width="15px"
@@ -68,7 +63,6 @@ import router from './router'
             />
           </svg>
         </MenubarTrigger>
-
         <MenubarContent alignOffset="5" class="MenubarContent">
           <MenubarItem
             inset
