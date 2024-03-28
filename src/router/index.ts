@@ -7,6 +7,7 @@ import KonkortTVMain from '@/components/KonkortTVMain.vue'
 import KonkortTVChannels from '@/components/KonkortTVChannels.vue'
 import KonkortTVAdvertising from '@/components/KonkortTVAdvertising.vue'
 import KonkortTVPriceList from '@/components/KonkortTVPriceList.vue'
+import KonkortNews from '@/components/KonkortNews.vue'
 
 import KonkortAboutUsAboutUs from '@/components/KonkortAboutUsAboutUs.vue'
 
@@ -66,6 +67,11 @@ const router = createRouter({
       path: '/contacts',
       name: 'contacts',
       component: KonkortContacts
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: KonkortNews
     }
   ]
 })

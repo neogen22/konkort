@@ -35,6 +35,7 @@ import router from './router'
       <MenubarMenu>
         <MenubarTrigger
           class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black"
+          @click="$router.push('/news')"
           ><p class="text-inherit">НОВОСТИ</p></MenubarTrigger
         >
       </MenubarMenu>
