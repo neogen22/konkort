@@ -186,6 +186,7 @@ const items = [
 </script>
 
 <template>
+  <h1 class="text-2xl text-center mt-6 mb-6 text-orange-400">Новости</h1>
   <div v-for="i in items" class="text-white text-justify pb-2" :key="i.id">
     <div class="lg:pb-2 lg:justify-between hidden lg:flex">
       <span class="text-orange-400">{{ i.title }} </span>

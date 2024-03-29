@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import { ref } from 'vue'
+import { RouterView, useRoute } from 'vue-router'
+import { computed, watch, ref } from 'vue'
+import router from './router'
 
 import {
   Menubar,
@@ -18,7 +19,27 @@ import {
   MenubarTrigger
 } from '@/components/ui/menubar'
 
-import router from './router'
+const route = useRoute()
+const path = computed(() => route.path)
+let aboutCompanyBoolean = ref(false)
+let tvBoolean = ref(false)
+watch(path, (now, next) => {
+  if (now === '/about/aboutUs' || now === '/about/services' || now === '/about/licenses') {
+    aboutCompanyBoolean.value = true
+  } else {
+    aboutCompanyBoolean.value = false
+  }
+  if (
+    now === '/tv/connect' ||
+    now === '/tv/channels' ||
+    now === '/tv/price-list' ||
+    now === '/tv/advertising'
+  ) {
+    tvBoolean.value = true
+  } else {
+    tvBoolean.value = false
+  }
+})
 </script>
 
 <template v-cloak>
@@ -49,6 +70,7 @@ import router from './router'
       <MenubarMenu>
         <MenubarTrigger
           class="flex justify-center cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 text-white selection:text-black hover:bg-white hover:text-black"
+          :class="{ active: tvBoolean }"
           id="box"
           ><div class="text-inherit">ТЕЛЕВИДЕНИЕ</div>
           <svg
@@ -64,7 +86,7 @@ import router from './router'
             />
           </svg>
         </MenubarTrigger>
-        <MenubarContent alignOffset="5" class="MenubarContent">
+        <MenubarContent alignOffset="5">
           <MenubarItem
             inset
             @click="router.push('/tv/connect')"
@@ -133,6 +155,7 @@ import router from './router'
       <MenubarMenu>
         <MenubarTrigger
           class="flex justify-center cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 text-white selection:text-black hover:bg-white hover:text-black"
+          :class="{ active: aboutCompanyBoolean }"
         >
           <div class="text-inherit">О КОМПАНИИ</div>
           <svg
@@ -191,5 +214,9 @@ import router from './router'
 <style scoped>
 [v-cloak] {
   display: none;
+}
+.active {
+  background-color: white;
+  color: black;
 }
 </style>
