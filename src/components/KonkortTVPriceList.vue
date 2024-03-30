@@ -20,8 +20,6 @@ onMounted(() => {
         entry.target.classList.remove('not-cool')
         entry.target.classList.add('cool')
       }
-
-      console.log('yeah')
     })
   })
   let allTr = document.querySelectorAll('tr')

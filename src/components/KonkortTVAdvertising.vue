@@ -673,6 +673,31 @@ svg {
   min-width: 24px;
   min-height: 24px;
 }
+
+@keyframes start {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes end {
+  from {
+    transform: translateX(800px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 .svg-1 {
   animation: start 1000ms;
 }
@@ -714,22 +739,6 @@ svg {
 }
 .p-for-animation-7 {
   animation: end 1350ms;
-}
-@keyframes start {
-  from {
-    transform: translateX(-200px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-@keyframes end {
-  from {
-    transform: translateX(800px);
-  }
-  to {
-    transform: translateX(0px);
-  }
 }
 @media (width >= 500px) {
   .non-smartphone-table {
