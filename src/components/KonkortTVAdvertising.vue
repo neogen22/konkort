@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/table'
 </script>
 
-<template>
+<template v-cloak>
   <h1 class="!text-orange-400 text-2xl text-center mt-6">Реклама на телеканале "КтвК"</h1>
   <p class="text-white text-base mt-6 text-justify">
     Реклама на телевидении – самая демократичная, так как отличается высочайшими рейтингами среди
@@ -669,6 +669,9 @@ import {
   </h1>
 </template>
 <style scoped>
+[v-cloak] {
+  display: none;
+}
 svg {
   min-width: 24px;
   min-height: 24px;
