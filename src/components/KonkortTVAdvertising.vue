@@ -90,7 +90,7 @@ import {
     </p>
   </div>
 
-  <table class="advertising-top mt-2 non-smartphone-table">
+  <table class="mt-2 non-smartphone-table">
     <tr>
       <td width="39px" class="align-top">
         <svg
@@ -239,7 +239,7 @@ import {
       </p>
     </div>
   </div>
-  <table class="advertising-top mt-4 non-smartphone-table">
+  <table class="mt-4 non-smartphone-table">
     <tr>
       <td width="39px" class="align-top">
         <svg
