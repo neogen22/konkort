@@ -23,7 +23,7 @@
           </svg>
         </td>
         <td class="align-top">
-          <p class="text-justify text-orange-400">цифровое телевидение</p>
+          <p class="text-justify text-orange-400">цифровое телевидение;</p>
         </td>
       </tr>
       <tr class="mt-2">
