@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/table'
 </script>
 
-<template v-cloak>
+<template>
   <h1 class="!text-orange-400 text-2xl text-center mt-6">Реклама на телеканале "КтвК"</h1>
   <p class="text-white text-base mt-6 text-justify">
     Реклама на телевидении – самая демократичная, так как отличается высочайшими рейтингами среди
@@ -669,8 +669,21 @@ import {
   </h1>
 </template>
 <style scoped>
-[v-cloak] {
-  display: none;
+@media (width >= 500px) {
+  .non-smartphone-table {
+    display: block;
+  }
+  .smartphone-table {
+    display: none;
+  }
+}
+@media (width < 500px) {
+  .non-smartphone-table {
+    display: none;
+  }
+  .smartphone-table {
+    display: block;
+  }
 }
 svg {
   min-width: 24px;
@@ -743,22 +756,7 @@ svg {
 .p-for-animation-7 {
   animation: end 1350ms;
 }
-@media (width >= 500px) {
-  .non-smartphone-table {
-    display: block;
-  }
-  .smartphone-table {
-    display: none;
-  }
-}
-@media (width < 500px) {
-  .non-smartphone-table {
-    display: none;
-  }
-  .smartphone-table {
-    display: block;
-  }
-}
+
 p {
   text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
 }
