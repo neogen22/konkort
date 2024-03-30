@@ -65,6 +65,9 @@ onMounted(() => {
     rel="stylesheet"
   />
   <html class="!scroll-smooth">
+    <header class="flex justify-center">
+      <div class="scroll-watcher max-w-2xl lg:max-w-4xl bg-lime-500 h-[5px] self-center"></div>
+    </header>
     <body
       class="container mx-auto place-items-center max-w-2xl mt-6 lg:max-w-4xl grid-cols-4 border-0 xxx scroll-smooth"
     >
@@ -226,7 +229,7 @@ onMounted(() => {
         </MenubarMenu>
       </Menubar>
       <div
-        class="fixed top-[85%] left-[80%] cursor-pointer sm:top-[90%] sm:left-[inherit] sm:ml-[560px] md:top-[90%] lg:top-[90%] md:left-[inherit] md:ml-[565px] lg:left-[inherit] lg:ml-[785px]"
+        class="fixed z-10 top-[85%] left-[80%] cursor-pointer sm:top-[90%] sm:left-[inherit] sm:ml-[560px] md:top-[90%] lg:top-[90%] md:left-[inherit] md:ml-[565px] lg:left-[inherit] lg:ml-[785px]"
         ref="smooth"
       >
         <svg
@@ -255,5 +258,50 @@ onMounted(() => {
 .active {
   background-color: white;
   color: black;
+}
+@media (width >= 1024px) {
+  .scroll-watcher {
+    width: calc(56rem - 4rem);
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+    position: fixed;
+  }
+  @keyframes scroll-watcher {
+    to {
+      scale: 1 1;
+    }
+  }
+}
+@media (768px <= width <= 1024px) {
+  .scroll-watcher {
+    width: calc(42rem - 4rem);
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+    position: fixed;
+  }
+  @keyframes scroll-watcher {
+    to {
+      scale: 1 1;
+    }
+  }
+}
+@media (width < 768px) {
+  .scroll-watcher {
+    width: calc(24.6rem - 4rem);
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+    position: fixed;
+  }
+  @keyframes scroll-watcher {
+    to {
+      scale: 1 1;
+    }
+  }
 }
 </style>
