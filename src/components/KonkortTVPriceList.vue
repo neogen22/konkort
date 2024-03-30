@@ -8,13 +8,34 @@ import {
   TableHeader,
   TableRow
 } from '@/components/ui/table'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('not-cool')
+        entry.target.classList.remove('cool')
+      } else {
+        entry.target.classList.remove('not-cool')
+        entry.target.classList.add('cool')
+      }
+
+      console.log('yeah')
+    })
+  })
+  let allTr = document.querySelectorAll('tr')
+  allTr.forEach((el) => {
+    observer.observe(el)
+  })
+})
 </script>
 
 <template>
   <h1 class="text-2xl text-center mt-6 text-orange-400">Прейскурант на услуги</h1>
   <Table class="mt-6 [&>*]:text-white"
     ><TableHeader>
-      <TableRow>
+      <TableRow class="up">
         <TableHead class="text-center">№ п/п</TableHead>
         <TableHead class="text-center">Наименование услуги, товара</TableHead>
         <TableHead class="text-center">Вид</TableHead>
@@ -25,7 +46,7 @@ import {
       </TableRow>
     </TableHeader>
     <TableBody>
-      <TableRow>
+      <TableRow class="up">
         <TableCell class="text-left w-[80px]">1</TableCell>
         <TableCell class="text-justify w-[600px]"
           >Подключение пользовательского (оконечного) оборудования Абонента к кабельной сети связи
@@ -35,7 +56,7 @@ import {
         <TableCell class="text-center w-[200px]"></TableCell>
         <TableCell class="text-center"></TableCell>
       </TableRow>
-      <TableRow>
+      <TableRow class="up">
         <TableCell class="text-left w-[80px]">1.1.</TableCell>
         <TableCell class="text-justify w-[600px]"
           >Подключение пользовательского (оконечного) оборудования Абонента к кабельной сети связи
@@ -52,7 +73,7 @@ import {
         >
         <TableCell class="text-center">300.00</TableCell>
       </TableRow>
-      <TableRow>
+      <TableRow class="up">
         <TableCell class="text-left w-[80px]">1.2.</TableCell>
         <TableCell class="text-justify w-[600px]"
           >Подключение пользовательского (оконечного) оборудования Абонента к кабельной сети связи
@@ -69,7 +90,7 @@ import {
         >
         <TableCell class="text-center">1900.00</TableCell>
       </TableRow>
-      <TableRow>
+      <TableRow class="up">
         <TableCell class="text-left w-[80px]">1.3.</TableCell>
         <TableCell class="text-justify w-[600px]"
           >Подключение пользовательского (оконечного) оборудования Абонента к кабельной сети связи
@@ -86,7 +107,7 @@ import {
         >
         <TableCell class="text-center">1300.00</TableCell>
       </TableRow>
-      <TableRow>
+      <TableRow class="up">
         <TableCell class="text-left w-[80px]">1.4.</TableCell>
         <TableCell class="text-justify w-[600px]"
           >То же что и п. 1.1., но для юридических лиц и ЧП.
@@ -97,7 +118,7 @@ import {
         >
         <TableCell class="text-center">900.00</TableCell>
       </TableRow>
-      <TableRow>
+      <TableRow class="up">
         <TableCell class="text-left w-[80px]">1.5.</TableCell>
         <TableCell class="text-justify w-[600px]"
           >Подключение пользовательского (оконечного) оборудования Абонента к кабельной сети связи
@@ -111,7 +132,7 @@ import {
         <TableCell class="text-center w-[200px]"></TableCell>
         <TableCell class="text-center">Бесплатно</TableCell>
       </TableRow>
-      <TableRow>
+      <TableRow class="up">
         <TableCell class="text-left w-[80px]">1.6.</TableCell>
         <TableCell class="text-justify w-[600px]"
           >Подключение пользовательского (оконечного) оборудования Абонента к кабельной сети связи
@@ -441,4 +462,26 @@ import {
     </TableRow>
   </Table>
 </template>
-<style scoped></style>
+<style scoped>
+.up {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.5s ease-out;
+  transition-delay: 0.3s;
+}
+.cool {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.5s ease-out;
+  transition-delay: 0.3s;
+}
+.not-cool {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.5s ease-out;
+  transition-delay: 0.3s;
+}
+p {
+  text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
+}
+</style>

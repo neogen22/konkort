@@ -7,8 +7,6 @@
   </div>
 </template>
 <style scoped>
-.full {
-}
 .small {
   height: 700px;
   width: auto;

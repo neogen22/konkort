@@ -11,7 +11,7 @@
       <tr>
         <td class="h-[35px] w-[39px] align-top">
           <svg
-            class="fill-orange-400"
+            class="fill-orange-400 svg-1"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -23,26 +23,34 @@
           </svg>
         </td>
         <td class="align-top">
-          <p class="text-justify text-orange-400">цифровое телевидение;</p>
+          <p class="text-justify text-orange-400 p-for-animation-1">цифровое телевидение;</p>
         </td>
       </tr>
       <tr class="mt-2">
         <td class="h-[35px] w-[39px] fill-orange-400" style="vertical-align: top">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 16 16"
+            class="svg-2"
+          >
             <path
               d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
             />
           </svg>
         </td>
         <td style="vertical-align: top">
-          <p class="text-justify text-orange-400">городские новости на телеканале "КтвК".</p>
+          <p class="text-justify text-orange-400 p-for-animation-2">
+            городские новости на телеканале "КтвК".
+          </p>
         </td>
       </tr>
     </table>
     <div class="smartphone-table">
       <div class="flex mt-2">
         <svg
-          class="fill-orange-400 float-left absolute"
+          class="fill-orange-400 float-left absolute svg-1"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -52,11 +60,11 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400">цифровое телевидение;</p>
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-1">цифровое телевидение;</p>
       </div>
       <div class="flex mt-2">
         <svg
-          class="fill-orange-400 float-left absolute"
+          class="fill-orange-400 float-left absolute svg-2"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -66,7 +74,9 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400">городские новости на телеканале "КтвК".</p>
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-2">
+          городские новости на телеканале "КтвК".
+        </p>
       </div>
     </div>
 
@@ -92,7 +102,7 @@
       <tr>
         <td class="h-[35px] w-[39px] align-top">
           <svg
-            class="fill-orange-400"
+            class="fill-orange-400 svg-1"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -104,13 +114,15 @@
           </svg>
         </td>
         <td class="align-top">
-          <p class="text-justify text-orange-400">разместим рекламу, объявления, поздравления;</p>
+          <p class="text-justify text-orange-400 p-for-animation-3">
+            разместим рекламу, объявления, поздравления;
+          </p>
         </td>
       </tr>
       <tr class="mt-2">
         <td class="align-top h-[35px] w-[39px]">
           <svg
-            class="fill-orange-400"
+            class="fill-orange-400 svg-2"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -122,13 +134,15 @@
           </svg>
         </td>
         <td class="align-top">
-          <p class="text-justify text-orange-400">поможем в продвижении Вашего бизнеса;</p>
+          <p class="text-justify text-orange-400 p-for-animation-4">
+            поможем в продвижении Вашего бизнеса;
+          </p>
         </td>
       </tr>
       <tr class="mt-2">
         <td class="h-[35px] w-[39px] align-top">
           <svg
-            class="fill-orange-400"
+            class="fill-orange-400 svg-3"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -140,7 +154,7 @@
           </svg>
         </td>
         <td class="align-top">
-          <p class="text-justify text-orange-400">
+          <p class="text-justify text-orange-400 p-for-animation-5">
             осветим все значимые события в жизни Вашего коллектива.
           </p>
         </td>
@@ -159,7 +173,7 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400">
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-3">
           разместим рекламу, объявления, поздравления;
         </p>
       </div>
@@ -175,7 +189,9 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400">поможем в продвижении Вашего бизнеса;</p>
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-4">
+          поможем в продвижении Вашего бизнеса;
+        </p>
       </div>
       <div class="flex mt-2">
         <svg
@@ -189,7 +205,7 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400">
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-5">
           осветим все значимые события в жизни Вашего коллектива.
         </p>
       </div>
@@ -206,6 +222,54 @@ svg {
   min-width: 24px;
   min-height: 24px;
 }
+.svg-1 {
+  animation: start 1000ms;
+}
+.svg-2 {
+  animation: start 1100ms;
+}
+.svg-3 {
+  animation: start 1200ms;
+}
+.svg-4 {
+  animation: start 1300ms;
+}
+.svg-5 {
+  animation: start 1400ms;
+}
+
+.p-for-animation-1 {
+  animation: end 1000ms;
+}
+.p-for-animation-2 {
+  animation: end 1100ms;
+}
+.p-for-animation-3 {
+  animation: end 1150ms;
+}
+.p-for-animation-4 {
+  animation: end 1200ms;
+}
+.p-for-animation-5 {
+  animation: end 1270ms;
+}
+
+@keyframes start {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes end {
+  from {
+    transform: translateX(800px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 @media (width >= 500px) {
   .non-smartphone-table {
     display: block;
@@ -221,5 +285,8 @@ svg {
   .smartphone-table {
     display: block;
   }
+}
+p {
+  text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
 }
 </style>

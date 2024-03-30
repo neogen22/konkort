@@ -27,6 +27,7 @@ let smooth = ref(undefined)
 watch(path, (now, next) => {
   if (now === '/about/aboutUs' || now === '/about/services' || now === '/about/licenses') {
     aboutCompanyBoolean.value = true
+    console.log(document.querySelector('.MenuBarTrigger')?.classList)
   } else {
     aboutCompanyBoolean.value = false
   }
@@ -76,21 +77,21 @@ onMounted(() => {
       >
         <MenubarMenu>
           <MenubarTrigger
-            class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black"
+            class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black hover:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] selection:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] MenuBarTrigger"
             @click="$router.push('/news')"
             ><p class="text-inherit">НОВОСТИ</p></MenubarTrigger
           >
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger
-            class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black"
+            class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black hover:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] selection:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] MenuBarTrigger"
             @click="$router.push('/contacts')"
             ><p class="text-inherit">КОНТАКТЫ</p></MenubarTrigger
           >
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger
-            class="flex justify-center cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 text-white selection:text-black hover:bg-white hover:text-black"
+            class="flex justify-center cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 text-white selection:text-black hover:bg-white hover:text-black hover:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] selection:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] MenuBarTrigger"
             :class="{ active: tvBoolean }"
             id="box"
             ><div class="text-inherit">ТЕЛЕВИДЕНИЕ</div>
@@ -175,7 +176,7 @@ onMounted(() => {
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger
-            class="flex justify-center cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 text-white selection:text-black hover:bg-white hover:text-black"
+            class="flex justify-center cursor-pointer rounded-md w-[140px] md:w-[140px] lg:w-[165px] h-10 p-0 text-white selection:text-black hover:bg-white hover:text-black hover:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)]"
             :class="{ active: aboutCompanyBoolean }"
           >
             <div class="text-inherit">О КОМПАНИИ</div>
@@ -229,7 +230,7 @@ onMounted(() => {
         </MenubarMenu>
       </Menubar>
       <div
-        class="fixed z-10 top-[85%] left-[80%] cursor-pointer sm:top-[90%] sm:left-[inherit] sm:ml-[560px] md:top-[90%] lg:top-[90%] md:left-[inherit] md:ml-[565px] lg:left-[inherit] lg:ml-[785px]"
+        class="fixed z-10 bottom-[20px] left-[80%] cursor-pointer sm:bottom-[20px] sm:left-[inherit] sm:ml-[560px] md:bottom-[20px] md:left-[inherit] md:ml-[565px] lg:left-[inherit] lg:ml-[785px] lg:bottom-[20px]"
         ref="smooth"
       >
         <svg
@@ -258,6 +259,14 @@ onMounted(() => {
 .active {
   background-color: white;
   color: black;
+  -webkit-box-shadow: 0px 0px 24px 9px rgba(245, 250, 249, 0.29);
+  -moz-box-shadow: 0px 0px 24px 9px rgba(245, 250, 249, 0.29);
+  box-shadow: 0px 0px 24px 9px rgba(245, 250, 249, 0.29);
+}
+button[aria-expanded='true'] {
+  -webkit-box-shadow: 0px 0px 24px 9px rgba(245, 250, 249, 0.29);
+  -moz-box-shadow: 0px 0px 24px 9px rgba(245, 250, 249, 0.29);
+  box-shadow: 0px 0px 24px 9px rgba(245, 250, 249, 0.29);
 }
 @media (width >= 1024px) {
   .scroll-watcher {
@@ -303,5 +312,8 @@ onMounted(() => {
       scale: 1 1;
     }
   }
+}
+p {
+  text-shadow: rgba(250, 250, 250, 1) 0px 0px 3px;
 }
 </style>

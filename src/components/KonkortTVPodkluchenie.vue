@@ -27,4 +27,8 @@
     телевизоре.
   </p>
 </template>
-<style scoped></style>
+<style scoped>
+p {
+  text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
+}
+</style>
