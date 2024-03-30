@@ -225,9 +225,8 @@ onMounted(() => {
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
-      <RouterView></RouterView>
       <div
-        class="fixed top-[85%] left-[80%] cursor-pointer lg:top-[90%] lg:left-[68%]"
+        class="fixed top-[85%] left-[80%] cursor-pointer sm:top-[90%] sm:left-[inherit] sm:ml-[560px] md:top-[90%] lg:top-[90%] md:left-[inherit] md:ml-[565px] lg:left-[inherit] lg:ml-[785px]"
         ref="smooth"
       >
         <svg
@@ -244,6 +243,7 @@ onMounted(() => {
           />
         </svg>
       </div>
+      <RouterView></RouterView>
     </body>
   </html>
 </template>
