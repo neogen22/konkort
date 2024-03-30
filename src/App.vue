@@ -79,14 +79,14 @@ onMounted(() => {
           <MenubarTrigger
             class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black hover:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] selection:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] MenuBarTrigger"
             @click="$router.push('/news')"
-            ><p class="text-inherit">НОВОСТИ</p></MenubarTrigger
+            ><p class="text-inherit shadow-none">НОВОСТИ</p></MenubarTrigger
           >
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger
             class="flex justify-center rounded-md cursor-pointer w-[140px] md:w-[140px] lg:w-[165px] h-10 text-white selection:text-black hover:bg-white hover:text-black hover:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] selection:shadow-[0_0_24px_9px_rgba(245,250,249,0.39)] MenuBarTrigger"
             @click="$router.push('/contacts')"
-            ><p class="text-inherit">КОНТАКТЫ</p></MenubarTrigger
+            ><p class="text-inherit shadow-none">КОНТАКТЫ</p></MenubarTrigger
           >
         </MenubarMenu>
         <MenubarMenu>
@@ -312,8 +312,5 @@ button[aria-expanded='true'] {
       scale: 1 1;
     }
   }
-}
-p {
-  text-shadow: rgba(250, 250, 250, 1) 0px 0px 3px;
 }
 </style>
