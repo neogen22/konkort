@@ -50,6 +50,7 @@ function topFunction() {
 }
 
 onMounted(() => {
+  smooth.value.style.visibility = 'hidden'
   window.addEventListener('scroll', () => {
     if (window.scrollY >= 100) {
       smooth.value.style.visibility = 'visible'
