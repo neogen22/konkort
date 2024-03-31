@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <body>
+  <body class="fade-text">
     <h1 class="text-2xl text-center mt-4 text-orange-400">О нас</h1>
     <p class="text-white text-base text-justify mt-6">
       OOO «Конкорт-1» предоставляет услуги кабельного телевидения жителям города Кондопоги. Мы
@@ -35,5 +35,16 @@
 <style scoped>
 p {
   text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
+}
+.fade-text {
+  animation: fade-in 500ms;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

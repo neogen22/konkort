@@ -1,13 +1,13 @@
 <template>
-  <body>
-    <h1 class="text-orange-400 text-2xl text-center mt-6">
-      Услуги, предоставляемые ООО «Конкорт-1»
-    </h1>
-    <p class="text-white text-base mt-6 text-justify">
+  <h1 class="text-orange-400 text-2xl text-center mt-6 fade-text background-with-opacity">
+    Услуги, предоставляемые ООО «Конкорт-1»
+  </h1>
+  <div class="background-with-opacity">
+    <p class="text-white text-base mt-6 text-justify fade-text p-2">
       ООО «Конкорт-1» - компания, предоставляющая широкий спектр услуг (все услуги предоставляются в
       одном кабеле):
     </p>
-    <table class="mt-4 non-smartphone-table">
+    <table class="non-smartphone-table p-2">
       <tr>
         <td class="h-[35px] w-[39px] align-top">
           <svg
@@ -26,7 +26,7 @@
           <p class="text-justify text-orange-400 p-for-animation-1">цифровое телевидение;</p>
         </td>
       </tr>
-      <tr class="mt-2">
+      <tr>
         <td class="h-[35px] w-[39px] fill-orange-400" style="vertical-align: top">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@
         </td>
       </tr>
     </table>
-    <div class="smartphone-table">
+    <div class="smartphone-table pl-2">
       <div class="flex mt-2">
         <svg
           class="fill-orange-400 float-left absolute svg-1"
@@ -74,31 +74,43 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400 p-for-animation-2">
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-2 pr-2">
           городские новости на телеканале "КтвК".
         </p>
       </div>
     </div>
-
-    <p class="mt-4 text-justify text-white">
+  </div>
+  <div class="background-with-opacity">
+    <p class="mt-4 text-justify text-white fade-text-2 p-2">
       Мы стремимся сделать жизнь своих абонентов ярче и интереснее. Отличительными чертами компании
       являются: использование современных технологий для предоставления услуг, постоянное расширение
       спектра оказываемых услуг, внимание к Вашим пожеланиям и потребностям. У нас Вы всегда
       получите информационную и техническую поддержку по всем интересующим Вас вопросам.
     </p>
-    <p class="mt-4 text-justify text-white">
-      ООО «Конкорт-1» предлагает Вам сотрудничество на выгодных условиях.
-    </p>
-    <p class="mt-4 text-justify text-white">
-      <span class="underline underline-offset-2 text-white">Для клиентов кабельной сети:</span> 2
-      пакета каналов в кабельной сети в цифровом качестве.
-    </p>
-    <p class="mt-4 text-justify text-white">
+  </div>
+
+  <p
+    class="mt-4 text-justify text-white fade-text-2 p-2 background-with-opacity block max-w-[580px]"
+  >
+    ООО «Конкорт-1» предлагает Вам сотрудничество на выгодных условиях.
+  </p>
+
+  <p class="mt-4 text-justify text-white fade-text-3 p-2 background-with-opacity max-w-[730px]">
+    <span class="underline underline-offset-2 text-white">Для клиентов кабельной сети:</span> 2
+    пакета телеканалов в кабельной сети в цифровом качестве.
+  </p>
+
+  <div class="background-with-opacity">
+    <p class="mt-4 text-justify text-white fade-text-3 p-2">
       Смотрите городские новости на нашем канале «КтвК» и Вы будете в курсе всех событий районного
       масштаба!
     </p>
-    <p class="mt-4 underline underline-offset-2 text-white">На телеканале «КтвК» мы:</p>
-    <table class="advertising-top mt-4 non-smartphone-table">
+  </div>
+  <div class="background-with-opacity max-w-[520px]">
+    <p class="mt-4 underline underline-offset-2 text-white fade-text-3 p-2">
+      На телеканале «КтвК» мы:
+    </p>
+    <table class="advertising-top non-smartphone-table pl-2">
       <tr>
         <td class="h-[35px] w-[39px] align-top">
           <svg
@@ -160,7 +172,7 @@
         </td>
       </tr>
     </table>
-    <div class="smartphone-table">
+    <div class="smartphone-table pl-2">
       <div class="flex mt-2">
         <svg
           class="fill-orange-400 float-left absolute"
@@ -173,7 +185,7 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400 p-for-animation-3">
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-3 pr-2">
           разместим рекламу, объявления, поздравления;
         </p>
       </div>
@@ -189,7 +201,7 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400 p-for-animation-4">
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-4 pr-2">
           поможем в продвижении Вашего бизнеса;
         </p>
       </div>
@@ -205,19 +217,21 @@
             d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"
           />
         </svg>
-        <p class="indent-7 text-justify text-orange-400 p-for-animation-5">
+        <p class="indent-7 text-justify text-orange-400 p-for-animation-5 pr-2">
           осветим все значимые события в жизни Вашего коллектива.
         </p>
       </div>
     </div>
-
-    <p class="mt-4 text-white">
-      Надеемся, что наше предложение вызовет интерес и позволит начать и развить наше
-      сотрудничество.
-    </p>
-  </body>
+  </div>
+  <p class="mt-4 text-white fade-text-3 background-with-opacity p-2 max-w-[800px]">
+    Надеемся, что наше предложение вызовет интерес и позволит начать и развить наше сотрудничество.
+  </p>
 </template>
 <style scoped>
+.background-with-opacity {
+  background: rgba(14, 18, 18, 0.75);
+  border-radius: 15px;
+}
 svg {
   min-width: 24px;
   min-height: 24px;
@@ -237,7 +251,6 @@ svg {
 .svg-5 {
   animation: start 1400ms;
 }
-
 .p-for-animation-1 {
   animation: end 1000ms;
 }
@@ -253,21 +266,29 @@ svg {
 .p-for-animation-5 {
   animation: end 1270ms;
 }
-
-@keyframes start {
+.fade-text {
+  animation: fade-in 500ms;
+}
+.fade-text-2 {
+  animation: fade-in 1s;
+}
+.fade-text-3 {
+  animation: fade-in 1200ms;
+}
+@keyframes fade-in {
   0% {
-    display: none;
     opacity: 0;
   }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
   100% {
-    display: block;
     opacity: 1;
+  }
+}
+@keyframes start {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
   }
 }
 

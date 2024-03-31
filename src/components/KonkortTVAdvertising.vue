@@ -11,12 +11,12 @@ import {
 </script>
 
 <template>
-  <h1 class="!text-orange-400 text-2xl text-center mt-6">Реклама на телеканале "КтвК"</h1>
-  <p class="text-white text-base mt-6 text-justify">
+  <h1 class="!text-orange-400 text-2xl text-center mt-6 fade-text">Реклама на телеканале "КтвК"</h1>
+  <p class="text-white text-base mt-6 text-justify fade-text">
     Реклама на телевидении – самая демократичная, так как отличается высочайшими рейтингами среди
     целевой аудитории и достигает широкого охвата за короткий период времени.
   </p>
-  <p class="text-justify mt-4 text-white">Почему реклама на телевидении эффективна?</p>
+  <p class="text-justify mt-4 text-white fade-text">Почему реклама на телевидении эффективна?</p>
   <div class="mt-2 smartphone-table">
     <svg
       class="float-left fill-orange-400 svg-1"
@@ -89,7 +89,6 @@ import {
       возможность размещения в различные временные интервалы: утро, день, вечер, ночь.
     </p>
   </div>
-
   <table class="mt-2 non-smartphone-table">
     <tr>
       <td width="39px" class="align-top">
@@ -190,17 +189,17 @@ import {
     </tr>
   </table>
 
-  <p class="text-white text-base mt-4 text-justify">
+  <p class="text-white text-base mt-4 text-justify fade-text-3">
     Реклама на телевидении - лучший инструмент для механического и фонового восприятия. Даже если
     телезритель отвел взор от видеоряда, рекламный контакт не прерывается и коммуникация
     продолжается на акустическом уровне.
   </p>
-  <p class="text-white text-base mt-4 text-justify">
+  <p class="text-white text-base mt-4 text-justify fade-text-3">
     Предлагаем Вам расширить круг Ваших клиентов и повысить объем продаж, воздействуя на ваших
     потенциальных потребителей с помощью проверенного, доказавшего свою эффективность тысячами
     успешных рекламных кампаний средства – размещения рекламы на телевидении.
   </p>
-  <p class="text-white text-base mt-4 text-justify">
+  <p class="text-white text-base mt-4 text-justify fade-text-3">
     Мы предоставляем следующий комплекс услуг при размещении телевизионной рекламы:
   </p>
   <div class="smartphone-table">
@@ -288,6 +287,7 @@ import {
     Расценки на изготовление и размещение рекламных и информационных материалов
   </h2>
   <h2 class="text-white text-xl text-center font-semibold">(с 01.03.2019 года)</h2>
+
   <Table class="mt-4 [&>*]:text-white"
     ><TableHeader>
       <TableRow>
@@ -689,21 +689,34 @@ svg {
   min-width: 24px;
   min-height: 24px;
 }
+.fade-text {
+  animation: fade-in 500ms;
+}
+.fade-text-2 {
+  animation: fade-in 1s;
+}
+.fade-text-3 {
+  animation: fade-in 1400ms;
+}
+tr,
+h2 {
+  animation: fade-in 1500ms;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes start {
-  0% {
-    display: none;
-    opacity: 0;
+  from {
+    transform: translateX(-300px);
   }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
+  to {
+    transform: translateX(0px);
   }
 }
 @keyframes end {

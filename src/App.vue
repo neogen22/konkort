@@ -313,4 +313,9 @@ button[aria-expanded='true'] {
     }
   }
 }
+body {
+  background-image: url('/public/tvAIAd.webp');
+  background-repeat: repeat-y;
+  min-height: 1024px;
+}
 </style>

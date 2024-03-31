@@ -186,19 +186,21 @@ const items = [
 </script>
 
 <template>
-  <h1 class="text-2xl text-center mt-6 mb-6 text-orange-400">Новости</h1>
-  <div v-for="i in items" class="text-white text-justify pb-2" :key="i.id">
-    <div class="lg:pb-2 lg:justify-between hidden lg:flex">
-      <span class="text-orange-400">{{ i.title }} </span>
-      <span class="">{{ i.date }}</span>
-    </div>
-    <div class="pb-2 lg:hidden">
-      <div class="text-orange-400 pb-2">{{ i.title }}</div>
-      <div class="">{{ i.date }}</div>
-    </div>
-    <p class="pb-2 whitespace-pre-line">{{ i.text }}</p>
+  <div class="[&>*] fade-text">
+    <h1 class="text-2xl text-center mt-6 mb-6 text-orange-400">Новости</h1>
+    <div v-for="i in items" class="text-white text-justify pb-2" :key="i.id">
+      <div class="lg:pb-2 lg:justify-between hidden lg:flex">
+        <span class="text-orange-400">{{ i.title }} </span>
+        <span class="">{{ i.date }}</span>
+      </div>
+      <div class="pb-2 lg:hidden">
+        <div class="text-orange-400 pb-2">{{ i.title }}</div>
+        <div class="">{{ i.date }}</div>
+      </div>
+      <p class="pb-2 whitespace-pre-line">{{ i.text }}</p>
 
-    <hr class="border-orange-400" />
+      <hr class="border-orange-400" />
+    </div>
   </div>
 
   <!--  <div>{{ items }}</div>
@@ -225,5 +227,16 @@ const items = [
 <style scoped>
 p {
   text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
+}
+.fade-text {
+  animation: fade-in 750ms;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

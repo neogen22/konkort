@@ -482,4 +482,17 @@ onMounted(() => {
 p {
   text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
 }
+h1 {
+  animation: h1-from 750ms;
+}
+@keyframes h1-from {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 </style>
