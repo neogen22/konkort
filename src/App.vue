@@ -42,21 +42,21 @@ watch(path, (now, next) => {
     tvBoolean.value = false
   }
 })
+function topFunction() {
+  scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
 onMounted(() => {
-  smooth.value.style.display = 'none'
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      smooth.value.style.display = 'block'
+    if (window.scrollY >= 100) {
+      smooth.value.style.visibility = 'visible'
     } else {
-      smooth.value.style.display = 'none'
+      smooth.value.style.visibility = 'hidden'
     }
   })
-  smooth.value.addEventListener('click', () =>
-    scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  )
 })
 </script>
 
@@ -229,8 +229,11 @@ onMounted(() => {
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
-      <div
-        class="fixed z-10 bottom-[20px] left-[80%] cursor-pointer sm:bottom-[20px] sm:left-[inherit] sm:ml-[560px] md:bottom-[20px] md:left-[inherit] md:ml-[565px] lg:left-[inherit] lg:ml-[785px] lg:bottom-[20px]"
+      <button
+        @click="topFunction"
+        @touchstart.passive="topFunction"
+        @touchend.passive="topFunction"
+        class="fixed z-50 bottom-[20px] left-[80%] cursor-pointer sm:bottom-[20px] sm:left-[inherit] sm:ml-[560px] md:bottom-[20px] md:left-[inherit] md:ml-[565px] lg:left-[inherit] lg:ml-[785px] lg:bottom-[20px]"
         ref="smooth"
       >
         <svg
@@ -246,7 +249,7 @@ onMounted(() => {
             d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 15l-5.247-6.44-5.263 6.44-.737-.678 6-7.322 6 7.335-.753.665z"
           />
         </svg>
-      </div>
+      </button>
       <RouterView></RouterView>
     </body>
   </html>
