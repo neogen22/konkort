@@ -238,7 +238,11 @@ watch(width, (newWidth) => {
 </script>
 <template>
   <div class="[&>*] fade-text">
-    <h1 class="!text-orange-400 text-2xl text-center mt-6">Список телеканалов</h1>
+    <div class="flex justify-center">
+      <h1 class="!text-orange-400 text-2xl text-center mt-6 background-with-opacity p-2">
+        Список телеканалов
+      </h1>
+    </div>
     <Tabs default-value="social" class="mt-6">
       <TabsList class="flex justify-center">
         <TabsTrigger value="social"> Социальный пакет </TabsTrigger>
@@ -246,34 +250,45 @@ watch(width, (newWidth) => {
       </TabsList>
 
       <TabsContent value="social">
-        <h2 class="text-white text-xl text-center mt-4">СОЦИАЛЬНЫЙ ПАКЕТ</h2>
-        <p class="text-white text-center">по состоянию на 30.01.2024</p>
-        <div
-          class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3 border-teal-600 text-white"
-        >
-          <span
-            v-for="channel of channelsSocial"
-            :key="channel.id"
-            class="w-full text-center min-h-7 border-r border-t border-teal-600 text-white"
+        <div class="flex justify-center">
+          <h2 class="text-white text-2xl text-center mt-6 background-with-opacity p-2">
+            СОЦИАЛЬНЫЙ ПАКЕТ <br />
+            (по состоянию на 31.01.2024)
+          </h2>
+        </div>
+        <div class="background-with-opacity-table">
+          <div
+            class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3 border-teal-600 text-white"
           >
-            {{ channel.channelName }}
-          </span>
+            <span
+              v-for="channel of channelsSocial"
+              :key="channel.id"
+              class="w-full text-center min-h-7 border-r border-t border-teal-600 text-white"
+            >
+              {{ channel.channelName }}
+            </span>
+          </div>
         </div>
       </TabsContent>
       <TabsContent value="base">
-        <h2 class="text-white text-xl text-center mt-4">БАЗОВЫЙ ПАКЕТ</h2>
-        <p class="text-white text-center">по состоянию на 30.01.2024</p>
-
-        <div
-          class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3 border-teal-600 text-white"
-        >
-          <span
-            v-for="channel of channelsBase"
-            :key="channel.id"
-            class="w-full text-center min-h-7 border-r border-t border-teal-600 text-white"
+        <div class="flex justify-center">
+          <h2 class="text-white text-2xl text-center mt-6 background-with-opacity p-2">
+            БАЗОВЫЙ ПАКЕТ<br />
+            (по состоянию на 30.01.2024)
+          </h2>
+        </div>
+        <div class="background-with-opacity-table">
+          <div
+            class="grid place-items-center border-l border-b mt-4 grid-cols-2 lg:grid-cols-3 border-teal-600 text-white"
           >
-            {{ channel.channelName }}
-          </span>
+            <span
+              v-for="channel of channelsBase"
+              :key="channel.id"
+              class="w-full text-center min-h-7 border-r border-t border-teal-600 text-white"
+            >
+              {{ channel.channelName }}
+            </span>
+          </div>
         </div>
       </TabsContent>
     </Tabs>
@@ -281,6 +296,15 @@ watch(width, (newWidth) => {
 </template>
 
 <style scoped>
+.background-with-opacity {
+  background: rgba(14, 18, 18, 0.75);
+  border-radius: 15px;
+}
+.background-with-opacity-table {
+  background: rgba(14, 18, 18, 0.75);
+  border-radius: 0px;
+}
+
 p {
   text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
 }

@@ -1,7 +1,11 @@
 <template>
-  <h1 class="text-orange-400 text-2xl text-center mt-6 fade-text background-with-opacity">
-    Услуги, предоставляемые ООО «Конкорт-1»
-  </h1>
+  <div class="flex justify-center">
+    <h1
+      class="text-orange-400 text-2xl text-center mt-6 fade-text background-with-opacity w-max p-2"
+    >
+      Услуги, предоставляемые ООО «Конкорт-1»
+    </h1>
+  </div>
   <div class="background-with-opacity">
     <p class="text-white text-base mt-6 text-justify fade-text p-2">
       ООО «Конкорт-1» - компания, предоставляющая широкий спектр услуг (все услуги предоставляются в
