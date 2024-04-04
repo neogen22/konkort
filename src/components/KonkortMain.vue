@@ -1,24 +1,26 @@
 <template>
-  <h1 class="text-2xl text-center mt-6 text-orange-400">
-    ООО «КОНКОРТ-1» Кабельное телевидение г.Кондопога
-  </h1>
-  <p class="text-base mt-6 text-justify font-normal text-white">
+  <div class="flex justify-center">
+    <h1 class="text-2xl text-center mt-6 text-orange-400 background-with-opacity p-2">
+      ООО «КОНКОРТ-1» Кабельное телевидение г.Кондопога
+    </h1>
+  </div>
+  <p class="text-base mt-6 text-justify font-normal text-white background-with-opacity p-2">
     ООО «КОНКОРТ-1» – мультисервисный оператор, предоставляющий услуги цифрового и кабельного
     телевидения. «КОНКОРТ-1» уже сегодня в Кондопоге оказывает мультимедийные услуги с помощью
     сетей, не имеющих аналогов в регионе. Сейчас в пакет предоставляемых услуг входят кабельное и
     цифровое телевидение по технологии DVB-C.
   </p>
-  <p class="text-base mt-4 text-justify text-white">
+  <p class="text-base mt-4 text-justify text-white background-with-opacity p-2">
     Сегодня даже самый изысканный телегурман сможет найти свою любимую программу. Вашему вниманию
     предоставлен весь спектр тематических каналов: новостные и спортивные, музыкальные и
     развлекательные, каналы стран ближнего зарубежья.
   </p>
-  <p class="text-base mt-4 text-justify text-white">
+  <p class="text-base mt-4 text-justify text-white background-with-opacity p-2">
     Коллектив журналистов, работающий в нашей телекомпании, готовит для вас информационную программу
     на телеканале «КТВК». Все самое интересное, что происходит в городе, вы увидите глазами наших
     репортеров.
   </p>
-  <p class="text-base mt-4 text-justify text-white">
+  <p class="text-base mt-4 text-justify text-white background-with-opacity p-2">
     Один из основных принципов работы «КОНКОРТ-1» – высокий уровень обслуживания абонентов, мы
     обеспечиваем квалифицированную техническую поддержку, у нас отсутствуют скрытые платежи.
     Подключайтесь - мы рады каждому абоненту!
@@ -27,5 +29,9 @@
 <style scoped>
 p {
   text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
+}
+.background-with-opacity {
+  background: rgba(14, 18, 18, 0.75);
+  border-radius: 15px;
 }
 </style>
