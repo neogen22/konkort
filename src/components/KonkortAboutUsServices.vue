@@ -1,8 +1,6 @@
 <template>
   <div class="flex justify-center">
-    <h1
-      class="text-orange-400 text-2xl text-center mt-6 fade-text background-with-opacity w-max p-2"
-    >
+    <h1 class="text-orange-400 text-2xl text-center fade-text background-with-opacity w-max p-2">
       Услуги, предоставляемые ООО «Конкорт-1»
     </h1>
   </div>
