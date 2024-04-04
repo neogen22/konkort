@@ -8,15 +8,12 @@
     <div
       class="background-with-opacity hidden sm:block md:ml-[80px] lg:ml-[310px] sm:w-[540px] h-[auto] pb-2"
     >
-      <p class="text-base text-wrap mt-6 text-right pt-2 pr-3">
+      <p class="text-base text-wrap mt-6 pt-2 pl-2">
         <span class="font-semibold">Юридический адрес:</span>&nbsp;&nbsp;&nbsp;186220, г.Кондопога,
         пр. Калинина, д.11-б, к.12
       </p>
-      <p class="text-base text-right pt-1 pr-3">
-        <span class="font-semibold">Почтовый адрес:</span
-        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;186220, г.Кондопога, ул.
-        Комсомольская д.18
-      </p>
+      <pre class="text-base text-left pt-1 pl-2"><span class="font-semibold">Почтовый адрес:</span
+        >          186220, г.Кондопога, ул. Комсомольская д.18</pre>
     </div>
     <div class="background-with-opacity block ml-[110px] sm:hidden w-[220px] h-[auto] pb-2">
       <p class="text-base text-wrap mt-6 pt-2 pl-4">
@@ -30,7 +27,9 @@
       <p class="text-base pt-1 pl-4">186220, г.Кондопога,</p>
       <p class="text-base pt-1 pl-4">ул. Комсомольская д.18</p>
     </div>
-    <div class="background-with-opacity w-[400px] hidden h-[auto] pb-2 sm:block">
+    <div
+      class="background-with-opacity sm:ml-[230px] lg:ml-[450px] w-[400px] hidden h-[auto] pb-2 sm:block"
+    >
       <p class="text-base mt-4 text-justify font-semibold pl-5 pt-2">Телефоны:</p>
       <p class="text-base mt-1 text-justify">
         <span class="text-orange-400 pl-5">8-(814-51) 7-44-64</span> - Абонентский отдел
@@ -101,7 +100,7 @@
       <p class="pl-5">р\с 40702810535520000004</p>
     </div>
     <div class="background-with-opacity hidden sm:block w-[340px] h-[auto] pb-2">
-      <p class="text-base mt-16 text-justify font-semibold pl-5 pt-2">Режим работы:</p>
+      <p class="text-base mt-1 text-justify font-semibold pl-5 pt-2">Режим работы:</p>
       <p class="pl-5">Понедельник - пятница: с 9:00 до 18:00.</p>
       <p class="pl-5">Суббота, воскресенье: выходной.</p>
       <p class="pl-5">Обед: с 13:00 до 14:00.</p>
@@ -115,7 +114,7 @@
     <div
       class="background-with-opacity hidden sm:block ml-[250px] lg:ml-[470px] w-[350px] h-[auto] pb-2"
     >
-      <p class="text-base mt-4 text-justify pl-5 pt-2">
+      <p class="text-base mt-1 text-justify pl-5 pt-2">
         <span class="font-semibold">Директор:</span>&nbsp;Ометов Михаил Владимирович
       </p>
     </div>
@@ -130,9 +129,9 @@
 p {
   text-shadow: rgba(250, 250, 250, 0.25) 0px 0px 3px;
 }
-/* .fade-text {
+.fade-text {
   animation: fade-in 750ms;
-} */
+}
 @keyframes fade-in {
   0% {
     opacity: 0;

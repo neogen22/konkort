@@ -318,8 +318,8 @@ button[aria-expanded='true'] {
   }
 }
 body {
-  background-image: url('/public/tvAIAd.webp');
-  background-repeat: repeat-y;
-  min-height: 1024px;
+  background-image: url('/public/tvAIUpsaceld.jpg');
+  min-height: 900px;
+  background-size: 100%;
 }
 </style>
