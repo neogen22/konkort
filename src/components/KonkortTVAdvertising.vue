@@ -12,7 +12,14 @@ import {
 
 <template>
   <div class="flex justify-center">
-    <h1 class="!text-orange-400 text-2xl text-center fade-text background-with-opacity p-2">
+    <h1
+      class="!text-orange-400 text-2xl text-center hidden fade-text background-with-opacity p-2 sm:block"
+    >
+      Реклама на телеканале "КтвК"
+    </h1>
+    <h1
+      class="!text-orange-400 text-2xl text-center fade-text background-with-opacity p-0 sm:hidden"
+    >
       Реклама на телеканале "КтвК"
     </h1>
   </div>

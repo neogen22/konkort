@@ -1,7 +1,15 @@
 <template>
   <div class="flex justify-center">
-    <h1 class="text-orange-400 text-2xl text-center fade-text background-with-opacity w-max p-2">
+    <h1
+      class="text-orange-400 text-2xl hidden text-center fade-text background-with-opacity w-max p-2 sm:block"
+    >
       Услуги, предоставляемые ООО «Конкорт-1»
+    </h1>
+    <h1
+      class="text-orange-400 text-xl text-center fade-text background-with-opacity w-max p-2 sm:hidden"
+    >
+      Услуги, предоставляемые <br />
+      ООО «Конкорт-1»
     </h1>
   </div>
   <div class="background-with-opacity">

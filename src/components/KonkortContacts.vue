@@ -1,9 +1,15 @@
 <template>
   <div class="[&>*]:text-white fade-text">
-    <div class="background-with-opacity ml-[5px] sm:ml-[30px] lg:ml-[70px] w-[350px] h-[auto] pb-2">
-      <h1 class="text-2xl text-center mt-6 !text-orange-400">
-        Общество с ограниченной ответственностью «КОНКОРТ-1»
-      </h1>
+    <div class="flex justify-center">
+      <div
+        class="background-with-opacity w-max ml-[5px] sm:ml-[30px] lg:ml-[70px] sm:w-[350px] h-[auto] p-2"
+      >
+        <h1 class="text-2xl text-center hidden !text-orange-400 sm:block">
+          Общество с ограниченной ответственностью «КОНКОРТ-1»
+        </h1>
+
+        <h1 class="text-xl text-center !text-orange-400 sm:hidden">ООО «КОНКОРТ-1»</h1>
+      </div>
     </div>
     <div
       class="background-with-opacity hidden sm:block md:ml-[80px] lg:ml-[310px] sm:w-[540px] h-[auto] pb-2"
