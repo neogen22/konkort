@@ -27,8 +27,8 @@ import {
     Реклама на телевидении – самая демократичная, так как отличается высочайшими рейтингами среди
     целевой аудитории и достигает широкого охвата за короткий период времени.
   </p>
-  <div class="background-with-opacity p-2">
-    <p class="text-justify mt-4 text-white fade-text">Почему реклама на телевидении эффективна?</p>
+  <div class="background-with-opacity mt-4 p-2">
+    <p class="text-justify text-white fade-text">Почему реклама на телевидении эффективна?</p>
     <div class="mt-2 smartphone-table">
       <svg
         class="float-left fill-orange-400 svg-1"

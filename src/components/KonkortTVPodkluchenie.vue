@@ -1,7 +1,7 @@
 <template>
   <div class="[&>*] fade-text">
     <div class="flex justify-center">
-      <h1 class="text-2xl text-center mt-6 text-orange-400 background-with-opacity p-2 w-[640px]">
+      <h1 class="text-2xl text-center text-orange-400 background-with-opacity p-2 w-[640px]">
         Как подключиться к кабельной сети ООО "Конкорт-1"
       </h1>
     </div>
@@ -17,7 +17,7 @@
     <p class="text-base mt-4 text-justify text-white background-with-opacity p-2 sm:w-max">
       Стоимость подключения к сети кабельного телевидения — 300 рублей.
     </p>
-    <p class="text-base mt-4 text-justify text-white background-with-opacity p-2">
+    <p class="text-base mt-4 text-justify text-white background-with-opacity p-2 lg:w-max">
       Ежемесячная абонентская плата — от 260 рублей (социальный пакет) до 360 рублей (базовый
       пакет).
     </p>

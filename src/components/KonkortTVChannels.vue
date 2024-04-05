@@ -239,7 +239,7 @@ watch(width, (newWidth) => {
 <template>
   <div class="[&>*] fade-text">
     <div class="flex justify-center">
-      <h1 class="!text-orange-400 text-2xl text-center mt-6 background-with-opacity p-2">
+      <h1 class="!text-orange-400 text-2xl text-center background-with-opacity p-2">
         Список телеканалов
       </h1>
     </div>

@@ -35,8 +35,8 @@ onMounted(() => {
       Прейскурант на услуги
     </h1>
   </div>
-  <div class="background-with-opacity">
-    <Table class="mt-6 [&>*]:text-white"
+  <div class="background-with-opacity mt-6">
+    <Table class="[&>*]:text-white"
       ><TableHeader>
         <TableRow class="up">
           <TableHead class="text-center">№ п/п</TableHead>
