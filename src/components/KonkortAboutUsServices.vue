@@ -120,7 +120,7 @@
     <p class="mt-4 underline underline-offset-2 text-white fade-text-3 p-2">
       На телеканале «КтвК» мы:
     </p>
-    <table class="advertising-top non-smartphone-table pl-2">
+    <table class="non-smartphone-table pl-2">
       <tr>
         <td class="h-[35px] w-[39px] align-top">
           <svg
@@ -238,10 +238,6 @@
   </p>
 </template>
 <style scoped>
-.background-with-opacity {
-  background: rgba(14, 18, 18, 0.75);
-  border-radius: 15px;
-}
 svg {
   min-width: 24px;
   min-height: 24px;
@@ -301,7 +297,6 @@ svg {
     transform: translateX(0px);
   }
 }
-
 @keyframes end {
   from {
     transform: translateX(800px);
@@ -309,6 +304,10 @@ svg {
   to {
     transform: translateX(0px);
   }
+}
+.background-with-opacity {
+  background: rgba(14, 18, 18, 0.75);
+  border-radius: 15px;
 }
 @media (width >= 500px) {
   .non-smartphone-table {
