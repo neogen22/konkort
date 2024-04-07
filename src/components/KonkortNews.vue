@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import {
   Pagination,
@@ -10,9 +11,14 @@ import {
   PaginationNext,
   PaginationPrev
 } from '@/components/ui/pagination'
-import type { reverse } from 'dns'
 
-const items = [
+function topFunction() {
+  scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+const news = [
   {
     id: 1,
     title: `Ребрендинг телеканала «Русский иллюзион»`,
@@ -183,6 +189,8 @@ const items = [
 `
   }
 ].reverse()
+let firstPage = ref(0)
+let lastPage = ref(7)
 </script>
 
 <template>
@@ -190,7 +198,11 @@ const items = [
     <div class="flex justify-center mb-6">
       <h1 class="text-2xl text-orange-400 background-with-opacity p-2">Новости</h1>
     </div>
-    <div v-for="i in items" class="text-white text-justify pb-2" :key="i.id">
+    <div
+      v-for="i in news.slice(firstPage, lastPage)"
+      class="text-white text-justify pb-2"
+      :key="i.id"
+    >
       <div class="background-with-opacity p-2">
         <div class="lg:pb-2 lg:justify-between hidden lg:flex">
           <span class="text-orange-400">{{ i.title }} </span>
@@ -205,27 +217,82 @@ const items = [
       <hr class="border-orange-400 mt-2" />
     </div>
   </div>
-
-  <!--  <div>{{ items }}</div>
-  <Pagination v-slot="{ page }" :total="100" :sibling-count="1" show-edges :default-page="1">
-    <PaginationList v-slot="{ items }" class="flex items-center gap-1">
-      <PaginationFirst />
-
-      <PaginationPrev />
-
-      <template v-for="(item, index) in items">
-        <PaginationListItem v-if="item.type === 'page'" :key="index" :value="item.value" as-child>
-          <Button class="w-10 h-10 p-0" :variant="item.value === page ? 'default' : 'outline'">
-            {{ item.value }}
-          </Button>
-        </PaginationListItem>
-        <PaginationEllipsis v-else :key="item.type" :index="index" />
-      </template>
-
-      <PaginationNext />
-      <PaginationLast />
-    </PaginationList>
-  </Pagination> -->
+  <div class="flex justify-center">
+    <Pagination
+      v-slot="{ page }"
+      :total="news.length"
+      :sibling-count="1"
+      show-edges
+      :default-page="1"
+    >
+      <PaginationList v-slot="{ items }" class="flex items-center gap-1">
+        <PaginationFirst
+          @click="
+            () => {
+              firstPage = 0
+              lastPage = 7
+              topFunction()
+            }
+          "
+        />
+        <PaginationPrev
+          @click="
+            () => {
+              firstPage -= 7
+              lastPage -= 7
+              topFunction()
+            }
+          "
+        />
+        <template v-for="(item, index) in items">
+          <PaginationListItem v-if="item.type === 'page'" :key="index" :value="item.value" as-child>
+            <Button
+              class="w-10 h-10 p-0"
+              :variant="item.value === page ? 'default' : 'outline'"
+              @click="
+                () => {
+                  if (item.value === 1) {
+                    firstPage = 0
+                    lastPage = 7
+                  }
+                  if (item.value === items.length) {
+                    firstPage = news.length - 7
+                    lastPage = news.length - 1
+                  }
+                  if (item.value !== 1 && item.value !== items.length) {
+                    firstPage = item.value * 7 - 7
+                    lastPage = item.value * 7
+                  }
+                  topFunction()
+                }
+              "
+            >
+              {{ item.value }}
+            </Button>
+          </PaginationListItem>
+          <PaginationEllipsis v-else :key="item.type" :index="index" />
+        </template>
+        <PaginationNext
+          @click="
+            () => {
+              firstPage += 7
+              lastPage += 7
+              topFunction()
+            }
+          "
+        />
+        <PaginationLast
+          @click="
+            () => {
+              firstPage = news.length - 7
+              lastPage = news.length - 1
+              topFunction()
+            }
+          "
+        />
+      </PaginationList>
+    </Pagination>
+  </div>
 </template>
 <style scoped>
 .background-with-opacity {
