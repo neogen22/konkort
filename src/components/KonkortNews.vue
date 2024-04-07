@@ -185,41 +185,42 @@ const news = [
 ].reverse()
 let firstPage = ref(0)
 let lastPage = ref(7)
+let pagesOnScreen = 7
 function topFunction(pageStatus, value = 0) {
   if (pageStatus === 'toFirstPage') {
     firstPage.value = 0
-    lastPage.value = 7
+    lastPage.value = pagesOnScreen
   }
   if (pageStatus === 'toNextPage') {
-    firstPage.value += 7
-    lastPage.value += 7
+    firstPage.value += pagesOnScreen
+    lastPage.value += pagesOnScreen
   }
   if (pageStatus === 'toPreviousPage') {
-    firstPage.value -= 7
-    lastPage.value -= 7
+    firstPage.value -= pagesOnScreen
+    lastPage.value -= pagesOnScreen
   }
   if (pageStatus === 'toLastPage') {
-    if (news.length % 7 === 0) {
-      firstPage.value = news.length - 7
+    if (news.length % pagesOnScreen === 0) {
+      firstPage.value = news.length - pagesOnScreen
     } else {
       let skip = 0
       for (let i = news.length; i >= 0; i -= 1) {
-        if (i % 7 === 0) {
+        if (i % pagesOnScreen === 0) {
           skip = i
           break
         }
       }
       firstPage.value = skip
     }
-    lastPage.value = firstPage.value + 7
+    lastPage.value = firstPage.value + pagesOnScreen
   }
   if (pageStatus === 'numberOfPage') {
     if (value === 1) {
       firstPage.value = 0
       lastPage.value = 7
     } else {
-      firstPage.value = value * 7 - 7
-      lastPage.value = value * 7
+      firstPage.value = value * pagesOnScreen - pagesOnScreen
+      lastPage.value = value * pagesOnScreen
     }
   }
   setTimeout(() => {
