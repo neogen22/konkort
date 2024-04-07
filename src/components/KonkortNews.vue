@@ -12,12 +12,6 @@ import {
   PaginationPrev
 } from '@/components/ui/pagination'
 
-function topFunction() {
-  scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
-}
 const news = [
   {
     id: 1,
@@ -191,6 +185,50 @@ const news = [
 ].reverse()
 let firstPage = ref(0)
 let lastPage = ref(7)
+function topFunction(pageStatus, value = 0) {
+  if (pageStatus === 'toFirstPage') {
+    firstPage.value = 0
+    lastPage.value = 7
+  }
+  if (pageStatus === 'toNextPage') {
+    firstPage.value += 7
+    lastPage.value += 7
+  }
+  if (pageStatus === 'toPreviousPage') {
+    firstPage.value -= 7
+    lastPage.value -= 7
+  }
+  if (pageStatus === 'toLastPage') {
+    if (news.length % 7 === 0) {
+      firstPage.value = news.length - 7
+    } else {
+      let skip = 0
+      for (let i = news.length; i >= 0; i -= 1) {
+        if (i % 7 === 0) {
+          skip = i
+          break
+        }
+      }
+      firstPage.value = skip
+    }
+    lastPage.value = firstPage.value + 7
+  }
+  if (pageStatus === 'numberOfPage') {
+    if (value === 1) {
+      firstPage.value = 0
+      lastPage.value = 7
+    } else {
+      firstPage.value = value * 7 - 7
+      lastPage.value = value * 7
+    }
+  }
+  setTimeout(() => {
+    scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, 1)
+}
 </script>
 
 <template>
@@ -224,72 +262,25 @@ let lastPage = ref(7)
       :sibling-count="1"
       show-edges
       :default-page="1"
+      :itemsPerPage="7"
     >
       <PaginationList v-slot="{ items }" class="flex items-center gap-1">
-        <PaginationFirst
-          @click="
-            () => {
-              firstPage = 0
-              lastPage = 7
-              topFunction()
-            }
-          "
-        />
-        <PaginationPrev
-          @click="
-            () => {
-              firstPage -= 7
-              lastPage -= 7
-              topFunction()
-            }
-          "
-        />
+        <PaginationFirst @click="topFunction('toFirstPage')" />
+        <PaginationPrev @click="topFunction('toPreviousPage')" />
         <template v-for="(item, index) in items">
           <PaginationListItem v-if="item.type === 'page'" :key="index" :value="item.value" as-child>
             <Button
               class="w-10 h-10 p-0"
               :variant="item.value === page ? 'default' : 'outline'"
-              @click="
-                () => {
-                  if (item.value === 1) {
-                    firstPage = 0
-                    lastPage = 7
-                  }
-                  if (item.value === items.length) {
-                    firstPage = news.length - 7
-                    lastPage = news.length - 1
-                  }
-                  if (item.value !== 1 && item.value !== items.length) {
-                    firstPage = item.value * 7 - 7
-                    lastPage = item.value * 7
-                  }
-                  topFunction()
-                }
-              "
+              @click="topFunction('numberOfPage', item.value)"
             >
               {{ item.value }}
             </Button>
           </PaginationListItem>
           <PaginationEllipsis v-else :key="item.type" :index="index" />
         </template>
-        <PaginationNext
-          @click="
-            () => {
-              firstPage += 7
-              lastPage += 7
-              topFunction()
-            }
-          "
-        />
-        <PaginationLast
-          @click="
-            () => {
-              firstPage = news.length - 7
-              lastPage = news.length - 1
-              topFunction()
-            }
-          "
-        />
+        <PaginationNext @click="topFunction('toNextPage')" />
+        <PaginationLast @click="topFunction('toLastPage')" />
       </PaginationList>
     </Pagination>
   </div>
