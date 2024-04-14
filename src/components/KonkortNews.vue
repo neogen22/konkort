@@ -217,7 +217,7 @@ function topFunction(pageStatus, value = 0) {
   if (pageStatus === 'numberOfPage') {
     if (value === 1) {
       firstPage.value = 0
-      lastPage.value = 7
+      lastPage.value = pagesOnScreen
     } else {
       firstPage.value = value * pagesOnScreen - pagesOnScreen
       lastPage.value = value * pagesOnScreen
